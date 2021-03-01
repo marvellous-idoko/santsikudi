@@ -1546,7 +1546,8 @@ let PoissonService = class PoissonService {
         headers.append('Content-Type', 'applicatiion/json');
         return this.Http.post(this.server + 'loan', { a: d, abtBiz: JSON.parse(localStorage.getItem("user"))['abtBiz'], acctId: JSON.parse(localStorage.getItem("user"))['account_no'] }, { headers: headers })
             .subscribe(s => {
-            console.info(s);
+            confirm('successfully submitted');
+            this.r.navigateByUrl('loanstatus');
         });
     }
     loanHis() {

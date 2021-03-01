@@ -2710,6 +2710,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "loan",
         value: function loan(d) {
+          var _this4 = this;
+
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Content-Type', 'applicatiion/json');
           return this.Http.post(this.server + 'loan', {
@@ -2719,7 +2721,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           }, {
             headers: headers
           }).subscribe(function (s) {
-            console.info(s);
+            confirm('successfully submitted');
+
+            _this4.r.navigateByUrl('loanstatus');
           });
         }
       }, {
@@ -2859,13 +2863,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "chkLog",
         value: function chkLog() {
-          var _this4 = this;
+          var _this5 = this;
 
           this.pS.retrAcctBal(this.s.checkLogUser()).subscribe(function (e) {
-            _this4.a = e;
+            _this5.a = e;
           });
           this.pS.retrCred(this.s.checkLogUser()).subscribe(function (e) {
-            _this4.aa = e;
+            _this5.aa = e;
           });
         }
       }, {
@@ -2983,30 +2987,30 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "login",
         value: function login(d) {
-          var _this5 = this;
+          var _this6 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
           headers.append('Content-Type', 'applicatiion/json');
           return this.Http.post(this.server + 'login', d, {
             headers: headers
           }).subscribe(function (d) {
-            _this5.d.getElementById('loader').classList.remove('show');
+            _this6.d.getElementById('loader').classList.remove('show');
 
             if (d['code'] == 1) {
-              _this5.rr = confirm(d['msg']);
+              _this6.rr = confirm(d['msg']);
 
-              if (_this5.rr == true) {
+              if (_this6.rr == true) {
                 localStorage.setItem('user', JSON.stringify(d['user']));
 
-                _this5.r.navigateByUrl('home');
+                _this6.r.navigateByUrl('home');
               }
 
-              _this5.r.navigateByUrl('home');
+              _this6.r.navigateByUrl('home');
 
               return;
             }
 
-            _this5.rr = confirm(d['msg']); // if (this.rr == true) this.r.navigateByUrl('home');
+            _this6.rr = confirm(d['msg']); // if (this.rr == true) this.r.navigateByUrl('home');
             // this.r.navigateByUrl('home');
           });
         }
