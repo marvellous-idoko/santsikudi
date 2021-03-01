@@ -1280,7 +1280,7 @@ LoanStatusComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".show{\r\nvisibility: visible!important;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9hbi9sb2FuLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSw2QkFBNkI7QUFDN0IiLCJmaWxlIjoic3JjL2FwcC9sb2FuL2xvYW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaG93e1xyXG52aXNpYmlsaXR5OiB2aXNpYmxlIWltcG9ydGFudDtcclxufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".show{\r\nvisibility: visible!important;\r\n}\r\n#loader{\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    height: 100%!important;\r\n    background: rgba(0, 0, 0, 0.685);\r\n    display: flex;\r\n    place-content: center;\r\n    place-items: center;\r\n    z-index: 5;\r\n    visibility: hidden;\r\n    width: 100%;\r\n    will-change: visibility;\r\n    transition: visibilty .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9hbi9sb2FuLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSw2QkFBNkI7QUFDN0I7QUFDQTtJQUNJLGVBQWU7SUFDZixNQUFNO0lBQ04sU0FBUztJQUNULHNCQUFzQjtJQUN0QixnQ0FBZ0M7SUFDaEMsYUFBYTtJQUNiLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIsVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsdUJBQXVCO0lBQ3ZCLGdFQUFnRTtBQUNwRSIsImZpbGUiOiJzcmMvYXBwL2xvYW4vbG9hbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNob3d7XHJcbnZpc2liaWxpdHk6IHZpc2libGUhaW1wb3J0YW50O1xyXG59XHJcbiNsb2FkZXJ7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICB0b3A6IDA7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICBoZWlnaHQ6IDEwMCUhaW1wb3J0YW50O1xyXG4gICAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjY4NSk7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgcGxhY2UtY29udGVudDogY2VudGVyO1xyXG4gICAgcGxhY2UtaXRlbXM6IGNlbnRlcjtcclxuICAgIHotaW5kZXg6IDU7XHJcbiAgICB2aXNpYmlsaXR5OiBoaWRkZW47XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHdpbGwtY2hhbmdlOiB2aXNpYmlsaXR5O1xyXG4gICAgdHJhbnNpdGlvbjogdmlzaWJpbHR5IC4zcyBjdWJpYy1iZXppZXIoMC42LCAtMC4yOCwgMC43MzUsIDAuMDQ1KTtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -1380,7 +1380,13 @@ let LoanComponent = class LoanComponent {
         }
     }
     onSubmit() {
-        this.ls.loan(this.addressForm.value);
+        this.d.getElementById('loader').classList.add('show');
+        this.ls.loan(this.addressForm.value).subscribe(s => {
+            var r = confirm('successfully submitted' + "\n" + "This is your Loan ID" + "\n" + s['loanId']);
+            if (r == true)
+                this.r.navigateByUrl('loanstatus');
+            this.r.navigateByUrl('loanstatus');
+        });
     }
 };
 LoanComponent.ctorParameters = () => [
@@ -1544,11 +1550,7 @@ let PoissonService = class PoissonService {
     loan(d) {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Content-Type', 'applicatiion/json');
-        return this.Http.post(this.server + 'loan', { a: d, abtBiz: JSON.parse(localStorage.getItem("user"))['abtBiz'], acctId: JSON.parse(localStorage.getItem("user"))['account_no'] }, { headers: headers })
-            .subscribe(s => {
-            confirm('successfully submitted');
-            this.r.navigateByUrl('loanstatus');
-        });
+        return this.Http.post(this.server + 'loan', { a: d, abtBiz: JSON.parse(localStorage.getItem("user"))['abtBiz'], acctId: JSON.parse(localStorage.getItem("user"))['account_no'] }, { headers: headers });
     }
     loanHis() {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
