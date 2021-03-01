@@ -173,7 +173,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Sign In</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<mat-card>\n    <form [formGroup]=\"addressForm\" novalidate (ngSubmit)=\"login()\">\n\n        <div class=\"row\" style=\"\">\n            <br>\n            <br>\n\n            <label>Your Account Number</label>\n            <br>\n            <input type=\"text\" formControlName=\"id\">\n        </div>\n        <br>\n        <br>\n        <div class=\"row\">\n            <label>Your Account Password</label>\n            <br>\n            <input type=\"password\" formControlName=\"pwd\">\n\n        </div>\n        <div class=\"row\" style=\"display: flex;\">\n\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"primary\" (click)=\"router('enrol')\">Sign Up</button>\n            </div>\n\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"accent\" type=\"submit\">login</button>\n            </div>\n\n        </div>\n    </form>\n</mat-card>\n<div id=\"loader\">\n    <figure>\n        <mat-spinner  color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Sign In</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<mat-card>\n    <form [formGroup]=\"addressForm\" novalidate (ngSubmit)=\"login()\">\n\n        <br>\n        <br>\n        <mat-form-field appearance=\"outline\">\n            <mat-label>Your Account Number</mat-label>\n            <input matInput type=\"text\" formControlName=\"id\">\n        </mat-form-field>\n        <br>\n        <br>\n            <mat-form-field appearance=\"outline\">\n                <mat-label>Your Account Password</mat-label>\n                <input matInput type=\"password\" formControlName=\"pwd\">\n            </mat-form-field>\n        <div class=\"row\" style=\"display: flex;\">\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"primary\" (click)=\"router('enrol')\">Sign Up</button>\n            </div>\n\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"accent\" type=\"submit\">login</button>\n            </div>\n\n        </div>\n    </form>\n\n</mat-card>\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
     /***/
   },
 
@@ -233,7 +233,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>withdraw works!</p>\n";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Withdrawal</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<br>\n<br>\n<br>\n<form [formGroup]=\"addressForm\" validate (ngSubmit)=\" withdraw()\">\n    <mat-card>\n        <mat-form-field appearance=\"outline\">\n            <mat-label>Amount to Withdraw</mat-label>\n            <input matInput type=\"number\" placeholder=\"amount\" formControlName=\"amount\">\n        </mat-form-field>\n\n        <div class=\"col\" style=\"margin: 5% 10%;\">\n            <button mat-raised-button color=\"accent\" type=\"submit\">Withdraw</button>\n        </div>\n    </mat-card>\n</form>";
     /***/
   },
 
@@ -2746,6 +2746,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             headers: headers
           });
         }
+      }, {
+        key: "withdraw",
+        value: function withdraw(s) {
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+          headers.append('Content-Type', 'applicatiion/json');
+          return this.Http.post(this.server + 'withdrawal', {
+            amt: s,
+            id: JSON.parse(localStorage.getItem("user"))['account_no']
+          }, {
+            headers: headers
+          });
+        }
       }]);
 
       return PoissonService;
@@ -3119,14 +3131,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var VCComponent = /*#__PURE__*/function () {
-      function VCComponent(s, l, fb) {
+      function VCComponent(s, l, fb, r) {
         _classCallCheck(this, VCComponent);
 
         this.s = s;
         this.l = l;
         this.fb = fb;
+        this.r = r;
         this.ed = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$";
         this.addressForm = this.fb.group({
           firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
@@ -3194,7 +3213,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(VCComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.e = this.s.loans();
+          this.e = this.s.loans(); // if(JSON.parse(localStorage.getItem("user"))['acctType'] != 'vc')
+          // {
+          //   var r = confirm('Oops, this is not an investor or Governmenta agency account ')
+          //   if (r== true)this.r.navigateByUrl('home')
+          // }
         }
       }, {
         key: "goback",
@@ -3213,6 +3236,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"]
       }, {
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
       }];
     };
 
@@ -3279,19 +3304,67 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _poisson_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../poisson.service */
+    "./src/app/poisson.service.ts");
 
     var WithdrawComponent = /*#__PURE__*/function () {
-      function WithdrawComponent() {
+      function WithdrawComponent(s, fb, r) {
         _classCallCheck(this, WithdrawComponent);
+
+        this.s = s;
+        this.fb = fb;
+        this.r = r;
+        this.addressForm = this.fb.group({
+          amount: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
       }
 
       _createClass(WithdrawComponent, [{
+        key: "withdraw",
+        value: function withdraw() {
+          var _this7 = this;
+
+          this.s.withdraw(this.addressForm.get('amount').value).subscribe(function (e) {
+            if (confirm(e.msg) == true) {
+              _this7.r.navigateByUrl('account_balance');
+            }
+
+            _this7.r.navigateByUrl('account_balance');
+          });
+        }
+      }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
       }]);
 
       return WithdrawComponent;
     }();
+
+    WithdrawComponent.ctorParameters = function () {
+      return [{
+        type: _poisson_service__WEBPACK_IMPORTED_MODULE_4__["PoissonService"]
+      }, {
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }];
+    };
 
     WithdrawComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-withdraw',
