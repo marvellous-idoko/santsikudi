@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>loan History</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<section style=\"margin-top: 80px;\">\n<mat-accordion>\n\n    <mat-expansion-panel *ngFor=\"let a of this.e | async\" style=\"margin: 20px;\">\n        <mat-expansion-panel-header>\n             <mat-panel-title style=\"display: block;\">\n                <h6>Loan ID</h6>\n                {{a.loanId}}\n            </mat-panel-title>\n             <mat-panel-title style=\"display: block;\">\n                <h6>Loan Amount</h6>\n\n                {{a.amount}}\n            </mat-panel-title>\n            <mat-panel-description style=\"display: block;\">\n                <h6>Date of Request</h6>\n\n                {{a.dateOfRequest.slice(0 ,10)}}\n            </mat-panel-description>\n        </mat-expansion-panel-header>\n        <mat-list role=\"list\">\n            <mat-list-item role=\"listitem\">\n                <h6>interest rate</h6>&nbsp; &nbsp;{{a.intRate}}\n            </mat-list-item>\n            <mat-list-item role=\"listitem\">\n                <h6>Summary of Business</h6>&nbsp; &nbsp;{{a.summary}}\n            </mat-list-item>\n            <mat-list-item role=\"listitem\">\n              \n                <h6>About Business</h6>&nbsp; &nbsp; {{a.aboutBusiness}}\n           </mat-list-item>\n            <mat-list-item role=\"listitem\">\n              \n            <h6>Reason</h6>&nbsp; &nbsp;       {{a.reason}}\n       </mat-list-item> \n       <mat-list-item role=\"listitem\">\n              \n        <h6>Request Account ID</h6>&nbsp; &nbsp;    {{a.acctId}}\n\n   </mat-list-item>\n            </mat-list>\n        \n         <mat-panel-title style=\"display: block;\">\n     \n        </mat-panel-title>\n         <mat-panel-title style=\"display: block;\">\n        </mat-panel-title>\n    </mat-expansion-panel>\n\n</mat-accordion>\n\n</section>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>loan History</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<section style=\"margin-top: 80px;\">\n    <mat-accordion>\n\n        <mat-expansion-panel *ngFor=\"let a of this.e | async\" style=\"margin: 20px;height: fit-content!important;\">\n            <mat-expansion-panel-header>\n                <mat-panel-title style=\"display: block;\">\n                    <h6>Loan ID</h6>\n                    {{a.loanId}}\n                </mat-panel-title>\n                <mat-panel-title style=\"display: block;\">\n                    <h6>Loan Amount</h6>\n\n                    {{a.amount}}\n                </mat-panel-title>\n                <mat-panel-description style=\"display: block;\">\n                    <div *ngIf=\"a.offered === true\">\n                        <div *ngIf=\"a.accepted === undefined\">\n                            <mat-radio-group aria-label=\"Select an option\">\n                                <mat-radio-button (click)=\"acceptLoan(a.loanId)\" value=\"1\">Accept</mat-radio-button>\n                                <mat-radio-button (click)=\"rejectLoan(a.loanId)\" value=\"2\">Reject</mat-radio-button>\n                              </mat-radio-group>\n                        </div>\n                    </div>\n                    <div *ngIf=\"a.offered === false || null\">\n                        {{a.dateOfRequest.slice(0,10)}}\n                    </div>\n                </mat-panel-description>\n            </mat-expansion-panel-header>\n            <mat-list role=\"list\">\n                <mat-list-item role=\"listitem\">\n                    <h6>interest rate</h6>&nbsp; &nbsp;{{a.intRate}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Summary of Business</h6>&nbsp; &nbsp;{{a.summary}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n\n                    <h6>About Business</h6>&nbsp; &nbsp; {{a.aboutBusiness}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n\n                    <h6>Reason</h6>&nbsp; &nbsp; {{a.reason}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n\n                    <h6>Request Account ID</h6>&nbsp; &nbsp; {{a.acctId}}\n\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n\n                    <h6>Date of Request</h6>&nbsp; &nbsp; {{a.dateOfRequest.slice(0,10)}}\n\n\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\" *ngIf=\"a.offered === true\">\n\n                    <h6>Proposed interest Rate</h6>&nbsp; &nbsp; {{a.VCOffer.intRate}}\n\n\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\" *ngIf=\"a.offered === true\">\n\n                    <h6>Propeosed Loan Amount</h6>&nbsp; &nbsp; {{a.VCOffer.amount}}\n\n\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\" *ngIf=\"a.offered === true\">\n\n                    <h6>Propeosed Loan Amount</h6>&nbsp; &nbsp; {{a.VCOffer.amount}}\n\n\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\" *ngIf=\"a.offered === true\">\n\n                    <h6>Duraation</h6>&nbsp; &nbsp; {{a.VCOffer.duration}}\n\n\n                    <mat-divider></mat-divider>\n                </mat-list-item>\n                <mat-list-item role=\"listitem\" *ngIf=\"a.offered === true\">\n\n                    <h6>Summary of proposal</h6>&nbsp; &nbsp; {{a.VCOffer.msg}}\n\n\n                </mat-list-item>\n\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\" *ngIf=\"a.offered === true && a.accepted === true\">\n\n                    <h6 color=\"accent\">You have accepted this offer</h6>\n\n\n                </mat-list-item>\n                <!-- <mat-divider></mat-divider> -->\n\n\n            </mat-list>\n\n            <mat-panel-title style=\"display: block;\">\n\n            </mat-panel-title>\n            <mat-panel-title style=\"display: block;\">\n            </mat-panel-title>\n        </mat-expansion-panel>\n\n    </mat-accordion>\n\n</section>");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><h6>VCs & Government Agencies</h6></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n\n<section style=\"margin-top: 80px;\">\n    <mat-accordion>\n    \n        <mat-expansion-panel *ngFor=\"let a of this.e | async\" style=\"margin: 20px;\">\n            <mat-expansion-panel-header>\n                 <mat-panel-title style=\"display: block;\">\n                    <h6>Loan ID</h6>\n                    {{a.loanId}}\n                </mat-panel-title>\n                 <mat-panel-title style=\"display: block;\">\n                    <h6>Loan Amount</h6>\n    \n                    {{a.amount}}\n                </mat-panel-title>\n                <mat-panel-description style=\"display: block;\">\n                    <h6>Date of Request</h6>\n    \n                    {{a.dateOfRequest.slice(0 ,10)}}\n                </mat-panel-description>\n            </mat-expansion-panel-header>\n            <mat-list role=\"list\">\n                <mat-list-item role=\"listitem\">\n                    <h6>interest rate</h6>&nbsp; &nbsp;{{a.intRate}}\n                </mat-list-item>\n                <mat-list-item role=\"listitem\">\n                    <h6>Summary of Business</h6>&nbsp; &nbsp;{{a.summary}}\n                </mat-list-item>\n                <mat-list-item role=\"listitem\">\n                  \n                    <h6>About Business</h6>&nbsp; &nbsp; {{a.aboutBusiness}}\n               </mat-list-item>\n                <mat-list-item role=\"listitem\">\n                  \n                <h6>Reason</h6>&nbsp; &nbsp;       {{a.reason}}\n           </mat-list-item> \n           <mat-list-item role=\"listitem\">\n                  \n            <h6>Request Account ID</h6>&nbsp; &nbsp;    {{a.acctId}}\n    \n       </mat-list-item>\n                </mat-list>\n            \n             <mat-panel-title style=\"display: block;\">\n         \n            </mat-panel-title>\n             <mat-panel-title style=\"display: block;\">\n            </mat-panel-title>\n        </mat-expansion-panel>\n    \n    </mat-accordion>\n    \n    </section>\n    \n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>Submitted Information</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n\n            <div>\n                <mat-form-field class=\"full-width\">\n                    <input matInput type=\"number\" placeholder=\"Loan ID\" formControlName=\"contact\">\n                    <mat-error *ngIf=\"addressForm.controls['contact'].hasError('invalid')\">\n                        Phone no. is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n           \n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field class=\"full-width\">\n                        <mat-select placeholder=\"select account type\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.abbreviation\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            account type <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div class=\"row\">\n\n                <div class=\"col\">\n                    <mat-form-field class=\"full-width\">\n                        <mat-select placeholder=\"State\" formControlName=\"state\">\n                            <mat-option *ngFor=\"let state of states\" [value]=\"state.abbreviation\">\n                                {{ state.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['state'].hasError('invalid')\">\n                            State is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n\n        </mat-card-content>\n        <mat-card-actions>\n            <button mat-raised-button color=\"accent\" type=\"submit\">Submit an offer</button>\n        </mat-card-actions>\n    </mat-card>\n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span>\n        <h6>VCs & Government Agencies</h6>\n    </span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n\n<section style=\"margin-top: 80px;\">\n    <mat-tab-group>\n        <mat-tab label=\"All loan Requests\">\n            <mat-accordion>\n\n                <mat-expansion-panel *ngFor=\"let a of this.e | async\" style=\"margin: 20px;\">\n                    <mat-expansion-panel-header>\n                        <mat-panel-title style=\"display: block;\">\n                            <h6>Loan ID</h6>\n                            {{a.loanId}}\n                        </mat-panel-title>\n                        <mat-panel-title style=\"display: block;\">\n                            <h6>Loan Amount</h6>\n\n                            {{a.amount}}\n                        </mat-panel-title>\n                        <mat-panel-description style=\"display: block;\">\n                            <h6>Date of Request</h6>\n\n                            {{a.dateOfRequest.slice(0 ,10)}}\n                        </mat-panel-description>\n                    </mat-expansion-panel-header>\n                    <mat-list role=\"list\">\n                        <mat-list-item role=\"listitem\">\n                            <h6>interest rate</h6>&nbsp; &nbsp;{{a.intRate}}\n                        </mat-list-item>\n                        <mat-list-item role=\"listitem\">\n                            <h6>Summary of Business</h6>&nbsp; &nbsp;{{a.summary}}\n                        </mat-list-item>\n                        <mat-list-item role=\"listitem\">\n\n                            <h6>About Business</h6>&nbsp; &nbsp; {{a.aboutBusiness}}\n                        </mat-list-item>\n                        <mat-list-item role=\"listitem\">\n\n                            <h6>Reason</h6>&nbsp; &nbsp; {{a.reason}}\n                        </mat-list-item>\n                        <mat-list-item role=\"listitem\">\n\n                            <h6>Request Account ID</h6>&nbsp; &nbsp; {{a.acctId}}\n\n                        </mat-list-item>\n                    </mat-list>\n\n                    <mat-panel-title style=\"display: block;\">\n\n                    </mat-panel-title>\n                    <mat-panel-title style=\"display: block;\">\n                    </mat-panel-title>\n                </mat-expansion-panel>\n\n            </mat-accordion>\n        </mat-tab>\n        <mat-tab label=\"Submitted offers\">\n            <mat-accordion>\n\n                <mat-expansion-panel *ngFor=\"let a of this.i | async\" style=\"margin: 20px;\">\n                    <mat-expansion-panel-header>\n                        <mat-panel-title style=\"display: block;\">\n                            <h6>Loan ID</h6>\n                            {{a.loanId}}\n                        </mat-panel-title>\n                        <mat-panel-title style=\"display: block;\">\n                            <h6>Offer Amount</h6>\n                            {{a.amt}}\n                        </mat-panel-title>\n                        <mat-panel-description style=\"display: block;\">\n                            <div *ngIf=\"a.accepted === true\">\n                                <h6>accepted</h6>\n\n                                {{a.accepted}}\n                            </div>\n                            <div *ngIf=\"a.accepted === false || null\">\n                                <h6>Date of Offer</h6>\n\n                                {{a.dateOfoffer.slice(0 ,10)}}\n                            </div>\n                        </mat-panel-description>\n                    </mat-expansion-panel-header>\n                    <mat-list role=\"list\">\n                        <mat-list-item role=\"listitem\">\n                            <h6>years</h6>&nbsp; &nbsp;{{a.years}}\n                        </mat-list-item>\n                        <mat-list-item role = \"listitem\">\n                        <h6>Account Id of Borrower</h6>&nbsp; &nbsp; {{a.id}}\n                        </mat-list-item>\n        \n                    </mat-list>\n\n                    <mat-panel-title style=\"display: block;\">\n\n                    </mat-panel-title>\n                    <mat-panel-title style=\"display: block;\">\n                    </mat-panel-title>\n                </mat-expansion-panel>\n\n            </mat-accordion>\n        </mat-tab>\n        <mat-tab label=\"Submit an Offer\">\n            <form style=\"padding: 10%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n\n                <mat-card-content>\n\n                    <mat-form-field appearance=\"outline\">\n                        <mat-label>Enter Loan Id</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Loan ID\" formControlName=\"id\">\n                    </mat-form-field>\n                    <br>\n                    <mat-form-field appearance=\"outline\">\n                        <mat-label>Enter Id of receipent</mat-label>\n                        <input matInput type=\"number\" placeholder=\"ID of Recepient\" formControlName=\"idd\">\n                    </mat-form-field>\n                    <br>\n                    <mat-form-field appearance=\"outline\">\n                        <mat-label>Enter Proposed Amount</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Amount\" formControlName=\"amt\">\n                    </mat-form-field>\n                    <div class=\"col\">\n                        <mat-form-field class=\"full-width\">\n                            <mat-label>select No. of years loan shold last</mat-label>\n                            <mat-select placeholder=\"years\" formControlName=\"years\">\n                                <mat-option *ngFor=\"let years of years\" [value]=\"years.name\">\n                                    {{ years.name }}\n                                </mat-option>\n                            </mat-select>\n                            <mat-error *ngIf=\"addressForm.controls['intRate'].hasError('invalid')\">\n                                interest rate<strong>required</strong>\n                            </mat-error>\n                        </mat-form-field>\n                    </div>\n\n                    <div class=\"col\">\n                        <mat-form-field class=\"full-width\">\n                            <mat-label>select proposed interest rate</mat-label>\n                            <mat-select placeholder=\"select proposed interest rate\" formControlName=\"intRate\">\n                                <mat-option *ngFor=\"let intRate of intRates\" [value]=\"intRate.name\">\n                                    {{ intRate.name }}\n                                </mat-option>\n                            </mat-select>\n                            <mat-error *ngIf=\"addressForm.controls['intRate'].hasError('invalid')\">\n                                interest rate<strong>required</strong>\n                            </mat-error>\n                        </mat-form-field>\n                    </div>\n                    <mat-form-field class=\"full-width\">\n                        <mat-label>Suummarise your loan offer here</mat-label>\n                        <textarea rows=\"8\" matInput placeholder=\"Summarise your offer\" formControlName=\"msg\"></textarea>\n                        <mat-error *ngIf=\"addressForm.controls['msg'].hasError('invalid')\">\n                            Summary is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </mat-card-content>\n                <mat-card-actions>\n                    <button mat-raised-button color=\"accent\" type=\"submit\">Submit an offer</button>\n                </mat-card-actions>\n            </form>\n        </mat-tab>\n    </mat-tab-group>\n\n</section>");
 
 /***/ }),
 
@@ -720,6 +720,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -741,7 +742,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
             _angular_common__WEBPACK_IMPORTED_MODULE_20__["CommonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSlideToggleModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatExpansionModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatProgressSpinnerModule"],
@@ -1249,12 +1253,40 @@ let LoanStatusComponent = class LoanStatusComponent {
     constructor(s, l) {
         this.s = s;
         this.l = l;
+        this.checked = false;
+        this.disabled = false;
     }
     ngOnInit() {
         this.e = this.s.loanHis();
     }
     goback() {
         this.l.back();
+    }
+    acceptLoan(d) {
+        var k = confirm('Are you sure you want to accept the loan');
+        if (k == false)
+            return;
+        else {
+            this.s.acpOff(d).subscribe(e => {
+                var d = confirm(e['a']);
+                if (d == true)
+                    this.e = this.s.loanHis();
+                this.e = this.s.loanHis();
+            });
+        }
+    }
+    rejectLoan(d) {
+        var k = confirm('Are you sure you want to reject the loan');
+        if (k == false)
+            return;
+        else {
+            this.s.rejOff(d).subscribe(e => {
+                var d = confirm(e['a']);
+                if (d == true)
+                    this.e = this.s.loanHis();
+                this.e = this.s.loanHis();
+            });
+        }
     }
 };
 LoanStatusComponent.ctorParameters = () => [
@@ -1564,10 +1596,31 @@ let PoissonService = class PoissonService {
         headers.append('Content-Type', 'applicatiion/json');
         return this.Http.get(this.server + 'loans', { headers: headers });
     }
+    rejOff(d) {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        headers.append('Content-Type', 'applicatiion/json');
+        return this.Http.get(this.server + 'rejOffer/' + d, { headers: headers });
+    }
+    getOffs() {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        headers.append('Content-Type', 'applicatiion/json');
+        return this.Http.get(this.server + 'getOffers/' + JSON.parse(localStorage.getItem("user"))['account_no'], { headers: headers });
+    }
+    acpOff(d) {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        headers.append('Content-Type', 'applicatiion/json');
+        return this.Http.get(this.server + 'accOffer/' + JSON.parse(localStorage.getItem("user"))['account_no'], { headers: headers });
+    }
     withdraw(s) {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Content-Type', 'applicatiion/json');
         return this.Http.post(this.server + 'withdrawal', { amt: s, id: JSON.parse(localStorage.getItem("user"))['account_no'] }, { headers: headers });
+    }
+    submitOffer(d) {
+        console.info(d);
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        headers.append('Content-Type', 'applicatiion/json');
+        return this.Http.post(this.server + 'submitOffer', { offer: d, id: JSON.parse(localStorage.getItem("user"))['account_no'] }, { headers: headers });
     }
 };
 PoissonService.ctorParameters = () => [
@@ -1795,55 +1848,62 @@ let VCComponent = class VCComponent {
         this.l = l;
         this.fb = fb;
         this.r = r;
-        this.ed = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$";
         this.addressForm = this.fb.group({
-            firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            lastName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].pattern(this.ed),
-                ])
-            ],
-            contact: [234, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(11)
-                ])
-            ],
-            address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            abtBiz: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            state: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            type: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            pwd: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(6)
-                ])
-            ],
+            id: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            idd: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            amt: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            msg: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            intRate: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            years: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
         });
-        this.types = [
-            { name: 'Business', abbreviation: 'primary' },
-            { name: 'investor', abbreviation: 'vc' }
+        this.intRates = [
+            { name: '25%' },
+            { name: '24%' },
+            { name: '23%' },
+            { name: '22%' },
+            { name: '21%' },
+            { name: '20%' },
+            { name: '15%' },
+            { name: '10%' },
+            { name: '5%' },
         ];
-        this.states = [
-            { name: 'Kano', abbreviation: 'Kano' },
-            { name: 'Kaduna', abbreviation: 'Kaduna' },
-            { name: 'Niger', abbreviation: 'Niger' },
-            { name: 'Katsina', abbreviation: 'Katsina' },
-            { name: 'Bornu', abbreviation: 'Bornu' },
-            { name: 'Sokoto', abbreviation: 'Sokoto' },
-            { name: 'Jigawa', abbreviation: 'Jigawa' },
-            { name: 'Taraba', abbreviation: 'Taraba' },
-            { name: 'Kwara', abbreviation: 'Kwara' },
-            { name: 'Nasarawa', abbreviation: 'Nasarawa' },
-            { name: 'Zamfara', abbreviation: 'Zamfara' },
-            { name: 'Kebbi', abbreviation: 'Kebbi' },
-            { name: 'Kogi', abbreviation: 'Kogi' },
-            { name: 'Gombe', abbreviation: 'Gombe' },
+        this.years = [
+            { name: '1 year' },
+            { name: '2 years' },
+            { name: '3 years' },
+            { name: '4 years' },
+            { name: '5 years' },
+            { name: '6 years' },
+            { name: '7 years' },
+            { name: '8 years' },
+            { name: '9 years' },
+            { name: '10 years' },
         ];
     }
+    // getSumOffs(){
+    //   .subscribe(e=>{
+    //     this.i = e;
+    //     console.info(this.i)
+    //   })
+    // }
     ngOnInit() {
         this.e = this.s.loans();
-        // if(JSON.parse(localStorage.getItem("user"))['acctType'] != 'vc')
-        // {
-        //   var r = confirm('Oops, this is not an investor or Governmenta agency account ')
-        //   if (r== true)this.r.navigateByUrl('home')
-        // }
+        console.info(this.e);
+        this.i = this.s.getOffs();
+        if (JSON.parse(localStorage.getItem("user"))['acctType'] != 'vc') {
+            var r = confirm('Oops, this is not an investor or Governmenta agency account ');
+            if (r == true)
+                this.r.navigateByUrl('home');
+        }
+    }
+    onSubmit() {
+        this.s.submitOffer(this.addressForm.value).subscribe(s => {
+            this.e = this.s.loans();
+            var tr = confirm('your offer was succefully summtted');
+            if (tr == true)
+                return;
+            return;
+        });
     }
     goback() {
         this.l.back();
