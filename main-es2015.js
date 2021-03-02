@@ -1162,10 +1162,11 @@ let HomeComponent = class HomeComponent {
         this.s = s;
         this.r = r;
         this.slides = [
-            // https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiW3V456XendbJEfvGyaQ3-vJVO5sQJDHXTA&usqp=CAU
             { 'image': 'https://m.dw.com/image/49281425_403.jpg' },
             { 'image': 'https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Middle%20East%20and%20Africa/Harnessing%20Nigerias%20fintech%20potential/Nigerian-1536x1536.jpg' },
             { 'image': 'https://nairametrics.com/wp-content/uploads/2020/05/Poor-Nigerians.jpg' },
+            { 'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTET-S4CkaG2-PmAc6_5_2VdsCk0OpN5FzBog&usqp=CAU' },
+            { 'image': 'https://cms.qz.com/wp-content/uploads/2018/10/northern-women-e1540987943534.jpg' },
         ];
         this.show = false;
     }
