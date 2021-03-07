@@ -53,7 +53,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-drawer-container class=\"example-container\" [hasBackdrop]=\"true\">\r\n    <mat-drawer #drawer mode=\"over\" position=\"end\">\r\n        <section style=\"padding:10px\">\r\n            <div>\r\n                <mat-card id=\"uiop\" style=\"\">\r\n\r\n                    <mat-card-title id=\"v\"></mat-card-title>\r\n                    <br>\r\n                    <mat-card-subtitle id=\"d\"></mat-card-subtitle>\r\n                </mat-card>\r\n                <br>\r\n                <mat-list>\r\n                    <mat-list-item matRipple (click)=\"goto('login')\">\r\n                        <mat-icon>login</mat-icon>&nbsp;&nbsp;&nbsp;\r\n                        Sign In\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple (click)=\"goto('enrol')\">\r\n                        <mat-icon>account_circle</mat-icon>&nbsp;&nbsp;\r\n                        Enrol\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple (click)=\"goto('home')\">\r\n                        <mat-icon>home</mat-icon>&nbsp;&nbsp;\r\n                        home\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple (click)=\"goto('deposit')\">\r\n                        <mat-icon>credit_card</mat-icon>&nbsp;&nbsp;\r\n                        deposit\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple (click)=\"goto('withdraw')\">\r\n                        <mat-icon>credit_score</mat-icon>&nbsp;&nbsp;\r\n                        withdraw\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple (click)=\"goto('account_balance')\">\r\n                        <mat-icon>account_balance</mat-icon>&nbsp;&nbsp;\r\n                        account balance\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple (click)=\"goto('loan')\">\r\n                        <mat-icon>receipt_short</mat-icon>&nbsp;&nbsp;\r\n                        loan\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple \r\n                     *ngIf=\"this.showo === true\"\r\n                     (click)=\"switchE()\">\r\n                        <mat-icon>receipt_short</mat-icon>&nbsp;&nbsp;\r\n                        Swithch to Enlgish\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple \r\n                    *ngIf=\"this.showo === false\"(click)=\"switchH()\">\r\n                        <mat-icon>receipt_short</mat-icon>&nbsp;&nbsp;\r\n                        Switch to Hausa\r\n                    </mat-list-item>\r\n\r\n                    <button mat-flat-button color=\"accent\" id=\"btn\" (click)=\"logOut()\"></button>\r\n\r\n                    <!-- <mat-list-item> deposit </mat-list-item> -->\r\n                </mat-list>\r\n            </div>\r\n            <br>\r\n        </section>\r\n    </mat-drawer>\r\n    <mat-drawer-content>\r\n        <button mat-icon-button class=\"example-icon\" id=\"hamburger\" (click)=\"drawer.toggle(); chk();\"\r\n            aria-label=\"Example icon-button with menu icon\">\r\n\r\n            <mat-icon>menu</mat-icon>&nbsp;&nbsp;\r\n        </button>\r\n        <div [@routeAnimations]=\"prepareRoute(outlet)\">\r\n            <router-outlet #outlet=\"outlet\"></router-outlet>\r\n        </div>\r\n    </mat-drawer-content>\r\n</mat-drawer-container>";
+    __webpack_exports__["default"] = "<mat-drawer-container class=\"example-container\" [hasBackdrop]=\"true\">\r\n    <mat-drawer #drawer mode=\"over\" position=\"end\">\r\n        <section style=\"padding:10px\">\r\n            <div>\r\n                <mat-card id=\"uiop\" style=\"\">\r\n\r\n                    <mat-card-title id=\"v\"></mat-card-title>\r\n                    <br>\r\n                    <mat-card-subtitle id=\"d\"></mat-card-subtitle>\r\n                </mat-card>\r\n                <br>\r\n                <mat-list>\r\n                    <mat-list-item\r\n                    *ngIf=\"this.showo === false\"\r\n                    matRipple (click)=\"goto('login')\">\r\n                        <mat-icon>login</mat-icon>&nbsp;&nbsp;&nbsp;\r\n                        Sign In\r\n                    </mat-list-item>\r\n                    <mat-list-item matRipple \r\n                    *ngIf=\"this.showo === true\"\r\n                    (click)=\"goto('login')\">\r\n                        <mat-icon>login</mat-icon>&nbsp;&nbsp;&nbsp;\r\n                        Shiga Ciki\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item \r\n                    *ngIf=\"this.showo === false\"\r\n                    matRipple (click)=\"goto('enrol')\">\r\n                        <mat-icon>account_circle</mat-icon>&nbsp;&nbsp;\r\n                        Enrol\r\n                    </mat-list-item>\r\n                    <mat-list-item \r\n                    *ngIf=\"this.showo === true\"\r\n                    matRipple (click)=\"goto('enrol')\">\r\n                        <mat-icon>account_circle</mat-icon>&nbsp;&nbsp;\r\n                        Rajista\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item \r\n                    *ngIf=\"this.showo === true\"\r\n                    matRipple (click)=\"goto('home')\">\r\n                        <mat-icon>home</mat-icon>&nbsp;&nbsp;\r\n                        Gida\r\n                    </mat-list-item>\r\n                   <mat-list-item \r\n                   *ngIf=\"this.showo === false\"\r\n                   matRipple (click)=\"goto('home')\">\r\n                        <mat-icon>home</mat-icon>&nbsp;&nbsp;\r\n                        home\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item\r\n                    *ngIf=\"this.showo === false\"\r\n                    matRipple (click)=\"goto('deposit')\">\r\n                        <mat-icon>credit_card</mat-icon>&nbsp;&nbsp;\r\n                        deposit\r\n                    </mat-list-item>\r\n                    <mat-list-item\r\n                    *ngIf=\"this.showo === true\"\r\n                    matRipple (click)=\"goto('deposit')\">\r\n                        <mat-icon>credit_card</mat-icon>&nbsp;&nbsp;\r\n                        Ajiya\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item \r\n                    *ngIf=\"this.showo === true\"\r\n                    matRipple (click)=\"goto('withdraw')\">\r\n                        <mat-icon>credit_score</mat-icon>&nbsp;&nbsp;\r\n                        Janye\r\n                    </mat-list-item>\r\n                    <mat-list-item \r\n                    *ngIf=\"this.showo === false\"\r\n                    matRipple (click)=\"goto('withdraw')\">\r\n                        <mat-icon>credit_score</mat-icon>&nbsp;&nbsp;\r\n                        withdraw\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple \r\n                    *ngIf=\"this.showo === false\"\r\n                    (click)=\"goto('account_balance')\">\r\n                        <mat-icon>account_balance</mat-icon>&nbsp;&nbsp;\r\n                        account balance\r\n                    </mat-list-item>\r\n\r\n                    <mat-list-item matRipple \r\n                    *ngIf=\"this.showo === true\"\r\n                    (click)=\"goto('account_balance')\">\r\n                        <mat-icon>account_balance</mat-icon>&nbsp;&nbsp;\r\n                        Asusun Lissafi\r\n                    </mat-list-item>\r\n\r\n                    <mat-divider ></mat-divider>\r\n                    <mat-list-item \r\n                    *ngIf=\"this.showo === true\" \r\n                     matRipple (click)=\"goto('loan')\">\r\n                        <mat-icon>receipt_short</mat-icon>&nbsp;&nbsp;\r\n                        Bashi\r\n                    </mat-list-item>\r\n                    <mat-list-item *ngIf=\"this.showo === false\"\r\n                     matRipple (click)=\"goto('loan')\">\r\n                        <mat-icon>receipt_short</mat-icon>&nbsp;&nbsp;\r\n                        Loan\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple \r\n                     *ngIf=\"this.showo === true\"\r\n                     (click)=\"switchE()\">\r\n                        <mat-icon>receipt_short</mat-icon>&nbsp;&nbsp;\r\n                        Swithch to Enlgish\r\n                    </mat-list-item>\r\n                    <mat-divider></mat-divider>\r\n                    <mat-list-item matRipple \r\n                    *ngIf=\"this.showo === false\"(click)=\"switchH()\">\r\n                        <mat-icon>receipt_short</mat-icon>&nbsp;&nbsp;\r\n                        Switch to Hausa\r\n                    </mat-list-item>\r\n\r\n                    <button mat-flat-button color=\"accent\" id=\"btn\" (click)=\"logOut()\"></button>\r\n\r\n                    <!-- <mat-list-item> deposit </mat-list-item> -->\r\n                </mat-list>\r\n            </div>\r\n            <br>\r\n        </section>\r\n    </mat-drawer>\r\n    <mat-drawer-content>\r\n        <button mat-icon-button class=\"example-icon\" id=\"hamburger\" (click)=\"drawer.toggle(); chk();\"\r\n            aria-label=\"Example icon-button with menu icon\">\r\n\r\n            <mat-icon>menu</mat-icon>&nbsp;&nbsp;\r\n        </button>\r\n        <div [@routeAnimations]=\"prepareRoute(outlet)\">\r\n            <router-outlet #outlet=\"outlet\"></router-outlet>\r\n        </div>\r\n    </mat-drawer-content>\r\n</mat-drawer-container>";
     /***/
   },
 
@@ -74,6 +74,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
     __webpack_exports__["default"] = "<section>\n    <h3>{{text}}</h3>\n    <button style=\"float: right;\" (click)=\"clicked()\">Ok</button>\n</section>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/chooser.directive.html":
+  /*!******************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/chooser.directive.html ***!
+    \******************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppChooserDirectiveHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<section *ngIf=\"click === true\">\r\n    <h1>Your Payments Details</h1>\r\n\r\n    <div>\r\n        <label>Name of Depositor</label>\r\n        {{nameOfDep}}\r\n    </div>\r\n    \r\n    <div>\r\n        <label>Santsi ID of Depositor</label>\r\n        {{accoutNoD}}\r\n    </div>\r\n    <div>\r\n        <label>Amount To be Deposited</label>\r\n        <h6>{{amt}}</h6>\r\n    </div>\r\n    <div>\r\n        <label>Receipient Name</label>\r\n\r\n        <h6>{{nameOfRec}}</h6>\r\n    </div>\r\n    <div>\r\n        <label>Santsi ID of Depositor</label>\r\n\r\n        <h6>{{accoutNoR}}</h6>\r\n    </div>\r\n    <div>\r\n        <label>Bank Account Number of Receipient</label>\r\n        <h6>{{bankAcct}}</h6>\r\n    </div>\r\n    <div>\r\n        <label>Reference Number</label>\r\n        <h6>{{refNo}}</h6>\r\n    </div>\r\n    <button (click)=\"check()\">pay now</button>\r\n</section>\r\n<button (click)=\"show=!show\" *ngIf=\"click === true\">View Transaction Details</button>";
     /***/
   },
 
@@ -113,7 +133,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Deposit</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<mat-card>\n    <br>\n    <br>\n    <br>\n    <mat-tab-group mat-align-tabs=\"center\" dynamicHeight=false>\n        <mat-tab label=\"Others\">\n            <br>\n            <br>\n            <h3>Select details to deposit into your another account</h3>\n            <form [formGroup]=\"addressForm\" ngSubmit=\"\">\n                <h4>Receipient Account Number</h4>\n                <mat-form-field  class=\"full-width\">\n                    <input matInput  [value]='ko.value' #ko (blur)=\"chkAcctNo()\" placeholder=\"Account Number\" formControlName=\"acctNo\">\n                    <mat-error *ngIf=\"addressForm.controls['acctNo'].hasError('invalid')\">\n                        Account Number is <strong>required</strong>\n                    </mat-error>\n                </mat-form-field>\n                <mat-card *ngIf=\"show === false\">\n                    input a valid santsii account\n                </mat-card>\n                <mat-card *ngIf=\"show === true\">\n                    Account Name :{{this.b['name']}}<br>\n                    Conntact :{{this.b['contact']}}\n                </mat-card>\n                <h4>Select amount to deposit</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"amount\" formControlName=\"amount\">\n                        <mat-option *ngFor=\"let amount of amounts\" [value]=\"amount.abbreviation\">\n                            {{ amount.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                        amount is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <h4>choose payment channel</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"channel\" formControlName=\"pmtType\">\n                        <mat-option *ngFor=\"let pmtType of pmtType\" [value]=\"pmtType.abbreviation\">\n                            {{ pmtType.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['pmtType'].hasError('invalid')\">\n                        payment type is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <mat-card-header *ngIf=\"this.addressForm.get('pmtType').value == 'airtime'\">\n                    Airtime channel currently not availaible\n                </mat-card-header>\n\n            </form>\n            <br>\n            <br>\n            <br>\n            <button mat-raised-button color=\"accent\" angular4-paystack color=\"accent\" id=\"paystackButton\"\n                email=\"{{this.h}}\" amount=\"{{this.addressForm.get('amount').value}}\" ref=\"{{this.ref}}\"\n                [channels]=\"['card']\" [class]=\"'paystackButton'\" (close)=\"paymentCancel()\" (callback)=\"paymentDone()\">\n                Deposit\n            </button>\n\n        </mat-tab>\n        <mat-tab label=\"Self\">\n            <br>\n            <br>\n            <br>\n            <h3>Select details to deposit into your personal account</h3>\n            <form [formGroup]=\"addressForm\">\n                <h4>Select amount to deposit</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"amount\" formControlName=\"amount\">\n                        <mat-option *ngFor=\"let amount of amounts\" [value]=\"amount.abbreviation\">\n                            {{ amount.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                        amount is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <h4>choose payment channel</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"channel\" formControlName=\"pmtType\">\n                        <mat-option *ngFor=\"let pmtType of pmtType\" [value]=\"pmtType.abbreviation\">\n                            {{ pmtType.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['pmtType'].hasError('invalid')\">\n                        payment type is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <mat-card-header *ngIf=\"this.addressForm.get('pmtType').value == 'airtime'\">\n                    Airtime channel currently not availaible, visit \n                    our nearest cash point to make this payment\n                     if you cannot access a card currently\n                </mat-card-header>\n\n            </form>\n            <br>\n            <br>\n            <br>\n            <button mat-raised-button color=\"accent\" angular4-paystack color=\"accent\" id=\"paystackButton\"\n                email=\"{{this.h}}\" amount=\"{{this.addressForm.get('amount').value}}\" ref=\"{{this.ref}}\"\n                [channels]=\"['card']\" [class]=\"'paystackButton'\" (close)=\"paymentCancel()\" (callback)=\"paymentDone()\">\n                Deposit\n            </button>\n\n        </mat-tab>\n    </mat-tab-group>\n\n</mat-card>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Deposit</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<br>\n<mat-card>\n    <br>\n    <mat-tab-group mat-align-tabs=\"center\" dynamicHeight=false>\n        <mat-tab label=\"Deposit\">\n            <h3>Input details for Transfer or Deposit</h3>\n            <form [formGroup]=\"addressForm\" ngSubmit=\"\" style=\"padding: 10px;margin: 2px; border: #69f0ae 2px solid;\">\n                <h4>Receipient Santsi Account Number</h4>\n                <mat-form-field class=\"full-width\">\n                    <input matInput [value]='ko.value' #ko (blur)=\"chkAcctNo()\" placeholder=\"Account Number\"\n                        formControlName=\"acctNo\">\n                    <mat-error *ngIf=\"addressForm.controls['acctNo'].hasError('invalid')\">\n                        Account Number is <strong>required</strong>\n                    </mat-error>\n                </mat-form-field>\n                <mat-card *ngIf=\"show === false\">\n                    input a valid santsii account\n                </mat-card>\n                <mat-card *ngIf=\"show === true\">\n                    <mat-card-header style=\"margin-bottom: 5px;\"> Account Name :{{this.b['name']}}</mat-card-header>\n                    <mat-card-header>Conntact\n                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{this.b['contact']}}</mat-card-header>\n                </mat-card>\n                <h4>Select amount to deposit</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"amount\" formControlName=\"amount\">\n                        <mat-option *ngFor=\"let amount of amounts\" [value]=\"amount.abbreviation\">\n                            {{ amount.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                        amount is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <h4>choose payment channel</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"channel\" formControlName=\"pmtType\">\n                        <mat-option *ngFor=\"let pmtType of pmtType\" [value]=\"pmtType.abbreviation\">\n                            {{ pmtType.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['pmtType'].hasError('invalid')\">\n                        payment type is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <div *ngIf=\"this.addressForm.get('pmtType').value === 'BAT'\">\n                    <label>Input Account Number to be debitted</label>\n                    <mat-form-field appearance=\"outline\">\n                        <mat-label>Input Account Number to transfer From</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Account Number\" (blur)=\"vrf()\"\n                            formControlName=\"acct\">\n                        <mat-hint *ngIf=\"this.ddee === true\">note that: only the Account No assigned on the Sterling\n                            sandbox can be used</mat-hint>\n                    </mat-form-field>\n                    <mat-list role=\"list\">\n                        <mat-list-item role=\"listitem\">\n                            <h6>Account Number</h6>&nbsp; &nbsp;{{this.vrfAccount}}\n                        </mat-list-item>\n                        <mat-divider></mat-divider>\n                        <mat-list-item role=\"listitem\">\n                            <h6>Message</h6>&nbsp; &nbsp;{{this.vrfMsg}}\n                        </mat-list-item>\n                        <mat-divider></mat-divider>\n                        <mat-list-item role=\"listitem\">\n                            <h6>Account Status</h6>&nbsp; &nbsp;{{this.VrfStatus}}\n                        </mat-list-item>\n                        <mat-divider></mat-divider>\n                    </mat-list>\n                </div>\n                <mat-card-header *ngIf=\"this.addressForm.get('pmtType').value == 'airtime'\">\n                    Airtime channel currently not availaible. We wanted to solve the problem of\n                    proximity to our agents and access to an account number by allowing users make payments in\n                    the form of airrime, which would mean, we partnering with Telecos but we couldn;t do that within the\n                    time frame of the hackathon\n                </mat-card-header>\n                <button mat-button>\n                    <h3 *ngIf=\"this.addressForm.get('pmtType').value === 'agent'\" (click)=\"genID()\">\n                        Generate Voucher\n                    </h3>\n                </button>\n                <div *ngIf=\"this.oko=== true\">\n                    <app-sterpay amt=\"{{addressForm.get('amount').value}}\" refNo=\"{{this.ref}}\"\n                        accoutNoR=\"{{this.h['account_no']}}\" accoutNoD=\"{{this.h['account_no']}}\"\n                        nameOfDep=\"{{this.h['fullName']}}\" nameOfRec=\"{{this.h['fullName']}}\"\n                        bankAcct=\"{{this.vrfAccount}}\"></app-sterpay>\n                </div>\n            </form>\n            <!-- \n            <button mat-raised-button color=\"accent\" angular4-paystack color=\"accent\" id=\"paystackButton\"\n                email=\"{{this.h}}\" amount=\"{{this.addressForm.get('amount').value}}\" ref=\"{{this.ref}}\"\n                [channels]=\"['card']\" [class]=\"'paystackButton'\" (close)=\"paymentCancel()\" (callback)=\"paymentDone()\">\n                Deposit\n            </button> -->\n\n        </mat-tab>\n        <mat-tab label=\"Save\">\n            <br>\n            <h3>Select details to deposit into your personal account</h3>\n            <form [formGroup]=\"addressForm\"style=\"padding: 10px;margin: 2px; border: #69f0ae 2px solid;\">\n                <h4>Select amount to deposit</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"amount\" formControlName=\"amount\">\n                        <mat-option *ngFor=\"let amount of amounts\" [value]=\"amount.abbreviation\">\n                            {{ amount.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                        amount is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <h4>choose payment channel</h4>\n                <mat-form-field class=\"full-width\">\n                    <mat-select placeholder=\"channel\" formControlName=\"pmtType\">\n                        <mat-option *ngFor=\"let pmtType of pmtType\" [value]=\"pmtType.abbreviation\">\n                            {{ pmtType.name }}\n                        </mat-option>\n                    </mat-select>\n                    <mat-error *ngIf=\"addressForm.controls['pmtType'].hasError('invalid')\">\n                        payment type is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n                <div *ngIf=\"this.addressForm.get('pmtType').value === 'BAT'\">\n                    <label>Input Account Number to be debitted</label>\n                    <mat-form-field appearance=\"outline\">\n                        <mat-label>Input Account Number to transfer From</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Account Number\" (blur)=\"vrf()\"\n                            formControlName=\"acct\">\n                        <mat-hint *ngIf=\"this.ddee === true\">note that: only the Account No assigned on the Sterling\n                            sandbox can be used</mat-hint>\n                    </mat-form-field>\n                    <mat-list role=\"list\">\n                        <mat-list-item role=\"listitem\">\n                            <h6>Account Number</h6>&nbsp; &nbsp;{{this.vrfAccount}}\n                        </mat-list-item>\n                        <mat-divider></mat-divider>\n                        <mat-list-item role=\"listitem\">\n                            <h6>Message</h6>&nbsp; &nbsp;{{this.vrfMsg}}\n                        </mat-list-item>\n                        <mat-divider></mat-divider>\n                        <mat-list-item role=\"listitem\">\n                            <h6>Account Status</h6>&nbsp; &nbsp;{{this.VrfStatus}}\n                        </mat-list-item>\n                        <mat-divider></mat-divider>\n                    </mat-list>\n                </div>\n                <!-- <label>Verification Details from name Enquiry</label>\n                <mat-list role=\"list\">\n                    <mat-list-item role=\"listitem\">\n                        <h6>Account Number</h6>&nbsp; &nbsp;{{this.vrfAccount}}\n                    </mat-list-item>\n                    <mat-divider></mat-divider>\n                    <mat-list-item role=\"listitem\">\n                        <h6>Message</h6>&nbsp; &nbsp;{{this.vrfMsg}}\n                    </mat-list-item>\n                    <mat-divider></mat-divider>\n                    <mat-list-item role=\"listitem\">\n                        <h6>Account Status</h6>&nbsp; &nbsp;{{this.VrfStatus}}\n                    </mat-list-item>\n                    <mat-divider></mat-divider>\n                </mat-list> -->\n                <mat-card-header *ngIf=\"this.addressForm.get('pmtType').value === 'airtime'\">\n                    Airtime channel currently not availaible. We wanted to solve the problem of\n                    proximity to our agents and access to an account number by allowing users make payments in\n                    the form of airrime, which would mean, we partnering with Telecos but we couldn;t do that within the\n                    time frame of the hackathon\n                </mat-card-header>\n                <br>\n                <button>\n                    <h3 *ngIf=\"this.addressForm.get('pmtType').value === 'agent'\" (click)=\"genIDp()\">\n                        Generate Voucher\n                    </h3>\n                    </button>\n              \n                <div *ngIf=\"this.oko=== true\">\n                    <app-sterpay amt=\"{{addressForm.get('amount').value}}\" refNo=\"{{this.ref}}\"\n                        accoutNoR=\"{{this.h['account_no']}}\" accoutNoD=\"{{this.h['account_no']}}\"\n                        nameOfDep=\"{{this.h['fullName']}}\" nameOfRec=\"{{this.h['fullName']}}\"\n                        bankAcct=\"{{this.vrfAccount}}\">\n                    </app-sterpay>\n                </div>\n            </form>\n           \n            <!-- <button mat-raised-button color=\"accent\" angular4-paystack color=\"accent\" id=\"paystackButton\"\n                email=\"{{this.h}}\" amount=\"{{this.addressForm.get('amount').value}}\" ref=\"{{this.ref}}\"\n                [channels]=\"['card']\" [class]=\"'paystackButton'\" (close)=\"paymentCancel()\" (callback)=\"paymentDone()\">\n                Deposit\n            </button> -->\n\n        </mat-tab>\n    </mat-tab-group>\n\n</mat-card>\n<!-- <div  > -->\n<app-button *ngIf=\"this.notif === true\" text=\"{{'Your Voucher ID is '+ this.tranId +'\\n'+ 'proceed tot the nearest\nSantsi Kudi Agent to Complete your Transaction'}}\"\n (ok)=\"goback($event)\" >\n    Ok\n</app-button>\n<!-- </div> -->";
     /***/
   },
 
@@ -173,7 +193,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top:0;\">\n    <span><strong>Santsi Kudi</strong></span>\n    <span id=\"spacer\"></span><br>\n\n</mat-toolbar>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === false\">\n    <div style=\"height: inherit;\n background:url('https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Middle%20East%20and%20Africa/Harnessing%20Nigerias%20fintech%20potential/Nigerian-1536x1536.jpg');\n display: flex; \n background-position: center;\n background-size: cover;\n background-repeat: no-repeat;\n align-items: center;\n justify-content: center;\">\n        <div>\n            <button mat-button class=\"tiles\" (click)=\"router('login')\">\n                <span *ngIf=\"this.show === true\">Shiga Ciki</span>\n                <span *ngIf=\"this.show === false\">Login</span>\n            </button>\n            <button mat-button class=\"tiles\" (click)=\"router('enrol')\">\n                <span *ngIf=\"this.show === true\">Rajista</span>\n                <span *ngIf=\"this.show === false\">Register</span>\n            </button>\n        </div>\n    </div>\n</section>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === true\">\n\n    <mat-carousel class=\"he\" timings=\"250ms ease-in\" [autoplay]=\"false\" interval=\"5000\" color=\"accent\" maxWidth=\"auto\"\n        proportion=\"25\" slides=\"3\" [loop]=\"true\" [hideArrows]=\"false\" [hideIndicators]=\"true\" [useKeyboard]=\"true\"\n        [useMouseWheel]=\"false\" orientation=\"ltr\">\n        <mat-carousel-slide #matCarouselSlide>\n            <div style=\"height: inherit; \n              display: flex;justify-content: center;align-items: center;\">\n                <div style=\"padding: 20px;\">\n                    <button mat-button class=\"tiles\" (click)=\"router('loanstatus')\" style=\"animation-delay: .2s;\">\n                        <mat-icon mat-card-image>receipt_long</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">\n                            <h6 style=\" line-height: 2;   margin-bottom: 0;\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;transform: translateY(10px);\">Matsayin</h6>\n                            <h6 style=\"  line-height: 2;   margin-bottom: 0;transform: translateY(10px);\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;\">Lamuni</h6>\n                        </mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan Status</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('VC')\" style=\"animation-delay: .1s;\">\n                        <mat-icon mat-card-image>receipt_short</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">VC & Govt</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">VCs & Govt</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" style=\"animation-delay: .3s;\">\n                        <mat-icon mat-card-image>caution</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Taimaka</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Help</mat-card-content>\n                    </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide class=\"he\" #matCarouselSlide>\n            <div style=\"height: inherit; display: flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\" (click)=\"router('deposit')\" style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>credit_card</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">yi biya</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Deposit</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('withdraw')\" style=\" animation-delay: .25s;\">\n                        <mat-icon mat-card-image>credit_score</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Janye</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Withdraw</mat-card-content>\n                    </button>\n\n                    <button mat-button class=\"tiles\" (click)=\"router('account_balance')\"\n                        style=\" animation-delay: .35s;\">\n\n                        <mat-icon mat-card-image>account_balance</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Asusun Lissafi</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Account Balance</mat-card-content>\n                    </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide class=\"he\" #matCarouselSlide>\n            <div style=\"height: inherit;display:flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\" (click)=\"router('enrol')\" style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>account_circle</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">rajista</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Enrol</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('login')\">\n                        <mat-icon mat-card-image>login</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Shiga Ciki</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Sign In</mat-card-content>\n\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('loan')\" style=\" animation-delay: .21s;\">\n                        <mat-icon mat-card-image>account_balance_wallet</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">bashi</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan</mat-card-content>\n                    </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n    </mat-carousel>\n\n    <!-- </div> -->\n</section>\n<!-- <section style=\"   padding:5px 35px;\">\n    <div style=\"display: flex; flex-wrap: wrap;\">\n\n\n    </div>\n</section><br> -->\n<app-chooser class=\"loader\" [text]='o' id=\"yy\" (ok)=\"yuuyu($event)\"></app-chooser>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top:0;\">\n    <span><strong>Santsi Kudi</strong></span>\n    <span id=\"spacer\"></span><br>\n\n</mat-toolbar>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === false\">\n    <div style=\"height: inherit;\n background:url('https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Middle%20East%20and%20Africa/Harnessing%20Nigerias%20fintech%20potential/Nigerian-1536x1536.jpg');\n display: flex; \n background-position: center;\n background-size: cover;\n background-repeat: no-repeat;\n align-items: center;\n justify-content: center;\">\n        <div>\n            <button mat-button class=\"tiles\" (click)=\"router('login')\">\n                <span *ngIf=\"this.show === true\">Shiga Ciki</span>\n                <span *ngIf=\"this.show === false\">Login</span>\n            </button>\n            <button mat-button class=\"tiles\" (click)=\"router('enrol')\">\n                <span *ngIf=\"this.show === true\">Rajista</span>\n                <span *ngIf=\"this.show === false\">Register</span>\n            </button>\n        </div>\n    </div>\n</section>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === true\">\n\n    <mat-carousel class=\"he\" timings=\"250ms ease-in\" [autoplay]=\"false\" interval=\"5000\" color=\"accent\" maxWidth=\"auto\"\n        proportion=\"25\" slides=\"3\" [loop]=\"true\" [hideArrows]=\"false\" [hideIndicators]=\"true\" [useKeyboard]=\"true\"\n        [useMouseWheel]=\"false\" orientation=\"ltr\">\n        <mat-carousel-slide class=\"he\" #matCarouselSlide>\n            <div style=\"height: inherit; display: flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\" (click)=\"router('deposit')\" style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>credit_card</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">yi biya</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Savings</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('withdraw')\" style=\" animation-delay: .25s;\">\n                        <mat-icon mat-card-image>credit_score</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Janye</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Withdraw</mat-card-content>\n                    </button>\n\n                    <button mat-button class=\"tiles\" (click)=\"router('loan')\"\n                        style=\" animation-delay: .35s;\">\n                        <mat-icon mat-card-image>account_balance_wallet</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Bashi</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan</mat-card-content>\n                    </button>\n\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide #matCarouselSlide>\n            <div style=\"height: inherit; \n              display: flex;justify-content: center;align-items: center;\">\n                <div style=\"padding: 20px;\">\n                    <button mat-button class=\"tiles\" (click)=\"router('loanstatus')\" style=\"animation-delay: .2s;\">\n                        <mat-icon mat-card-image>receipt_long</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">\n                            <h6 style=\" line-height: 2;   margin-bottom: 0;\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;transform: translateY(10px);\">Matsayin</h6>\n                            <h6 style=\"  line-height: 2;   margin-bottom: 0;transform: translateY(10px);\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;\">Lamuni</h6>\n                        </mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan Status</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('VC')\" style=\"animation-delay: .1s;\">\n                        <mat-icon mat-card-image>receipt_short</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">VC & Govt</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">VCs & Govt</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" style=\"animation-delay: .3s;\">\n                        <mat-icon mat-card-image>caution</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Taimaka</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Help</mat-card-content>\n                    </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide class=\"he\" #matCarouselSlide>\n            <div style=\"height: inherit;display:flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\" (click)=\"router('enrol')\" style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>account_circle</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">rajista</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Enrol</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('deposit')\">\n                        <mat-icon mat-card-image>login</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Biya</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Payments</mat-card-content>\n\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('account_balance')\" style=\" animation-delay: .21s;\">\n                        <mat-icon mat-card-image>account_balance</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Asusun Lissafi</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Account Bal</mat-card-content>\n                    </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n    </mat-carousel>\n\n    <!-- </div> -->\n</section>\n<!-- <section style=\"   padding:5px 35px;\">\n    <div style=\"display: flex; flex-wrap: wrap;\">\n\n\n    </div>\n</section><br> -->\n<app-chooser class=\"loader\" [text]='o' id=\"yy\" (ok)=\"yuuyu($event)\"></app-chooser>";
     /***/
   },
 
@@ -233,7 +253,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Sign In</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<mat-card>\n    <form [formGroup]=\"addressForm\" novalidate (ngSubmit)=\"login()\">\n\n        <br>\n        <br>\n        <mat-form-field appearance=\"outline\">\n            <mat-label>Your Account Number</mat-label>\n            <input matInput type=\"text\" formControlName=\"id\">\n        </mat-form-field>\n        <br>\n        <br>\n        <mat-form-field appearance=\"outline\">\n            <mat-label>Your Account Password</mat-label>\n            <input matInput type=\"password\" formControlName=\"pwd\">\n        </mat-form-field>\n        <div class=\"row\" style=\"display: flex;\">\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"primary\" (click)=\"router('enrol')\">Sign Up</button>\n            </div>\n\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"accent\" type=\"submit\">login</button>\n            </div>\n\n        </div>\n    </form>\n\n<!-- <div > -->\n        <app-button [text]=\"text\" style=\"visibility: hidden;\" id=\"koo\" (ok)=\"parentEvent($event)\" >\n                Ok\n       \n        </app-button>\n<!-- </div> -->\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Sign In</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<mat-card>\n    <form [formGroup]=\"addressForm\" novalidate (ngSubmit)=\"login()\">\n\n        <br>\n        <br>\n        <mat-form-field appearance=\"outline\">\n            <mat-label>Your Account Number</mat-label>\n            <input matInput type=\"text\" formControlName=\"id\">\n        </mat-form-field>\n        <br>\n        <br>\n        <mat-form-field appearance=\"outline\">\n            <mat-label>Your Account Password</mat-label>\n            <input matInput type=\"password\" formControlName=\"pwd\">\n        </mat-form-field>\n        <div class=\"row\" style=\"display: flex;\">\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"primary\" (click)=\"router('enrol')\">Sign Up</button>\n            </div>\n\n            <div class=\"col\" style=\"margin: 5% 10%;\">\n                <button mat-raised-button color=\"accent\" type=\"submit\">login</button>\n            </div>\n\n        </div>\n    </form>\n\n<!-- <div > -->\n        <app-button [text]=\"text\" style=\"visibility: hidden;\" id=\"koo\" (ok)=\"parentEvent($event)\" >\n                Ok\n        </app-button>\n<!-- </div> -->\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
     /***/
   },
 
@@ -254,6 +274,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
     __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Account Balance</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n    <mat-toolbar>\n        <h1 style=\"text-align: right;\">\n            {{this.a/100}}\n            <!-- {{this.a.Math.ceil(this.a.length - 1),this.a.length)}} <span>your total cash</span> -->\n        </h1>\n    </mat-toolbar>\n<div class=\"df\" *ngFor=\"let a of this.aa\">\n\n    <mat-accordion>\n        <mat-expansion-panel>\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    account_noOfDepositor\n                </mat-panel-title>\n                <mat-panel-description>\n                    {{a['account_noOfDepositor']}}\n                </mat-panel-description>\n            </mat-expansion-panel-header>\n        </mat-expansion-panel>\n\n    </mat-accordion>\n    <mat-accordion>\n        <mat-expansion-panel>\n\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    amountDeposited\n                </mat-panel-title>\n                <mat-panel-description>\n                    {{a['amountDeposited']/100}} </mat-panel-description>\n            </mat-expansion-panel-header>\n        </mat-expansion-panel>\n\n    </mat-accordion>\n\n    <mat-accordion>\n        <mat-expansion-panel>\n\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    dateOfTransaction\n                </mat-panel-title>\n                <mat-panel-description>\n                    {{a['dateOfTransaction']}} </mat-panel-description>\n            </mat-expansion-panel-header>\n        </mat-expansion-panel>\n    </mat-accordion>\n    <mat-accordion>\n        <mat-expansion-panel>\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    nameOfDepostor\n                </mat-panel-title>\n                <mat-panel-description>\n                    {{a['nameOfDepostor']}} </mat-panel-description>\n            </mat-expansion-panel-header>\n        </mat-expansion-panel>\n    </mat-accordion>\n<mat-accordion>\n\n<mat-expansion-panel>\n\n    <mat-expansion-panel-header>\n        <mat-panel-title>\n            refNo\n        </mat-panel-title>\n        <mat-panel-description>\n            {{a['refNo']}} </mat-panel-description>\n    </mat-expansion-panel-header>\n    </mat-expansion-panel>\n    </mat-accordion>\n</div>\n<!-- <label></label>\n        <mat-card-header>{{a['account_noOfDepositor']}}</mat-card-header>\n        <mat-divider></mat-divider>\n        <mat-card-header>{{a['amountDeposited']}}</mat-card-header>\n        <mat-divider></mat-divider>\n        <mat-card-header>{{a['dateOfTransaction']}}</mat-card-header>\n        <mat-divider></mat-divider>\n        <mat-card-header>{{a['nameOfDepostor']}}</mat-card-header>\n        <mat-divider></mat-divider>\n        <mat-card-header>{{a['refNo']}}</mat-card-header>\n        <mat-divider></mat-divider>\n        <mat-card-header>{{a['nameOfReceipient']}}</mat-card-header>\n    </mat-card> -->\n\n<!-- <table mat-table dataSource=\"{{this.aa | async}}\" class=\"mat-elevation-z8\"> -->\n\n<!--- Note that these columns can be defined in any order.\n              The actual rendered columns are set as a property on the row definition\" -->\n\n<!-- Position Column -->\n<!-- <ng-container matColumnDef=\"nameOfDepostor\">\n          <th mat-header-cell *matHeaderCellDef> Name of Depositor </th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.nameOfDepostor}} </td>\n        </ng-container>\n       -->\n<!-- Name Column -->\n<!-- <ng-container matColumnDef=\"account_noOfReceipient\">\n          <th mat-header-cell *matHeaderCellDef> Recipient Account </th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.account_noOfReceipient}} </td>\n        </ng-container> -->\n<!-- <ng-container matColumnDef=\"nameOfReceipient\">\n            <th mat-header-cell *matHeaderCellDef> Recipient Account </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.nameOfReceipient}} </td>\n          </ng-container> -->\n\n<!-- Weight Column -->\n<!-- <ng-container matColumnDef=\"amountDeposited\">\n          <th mat-header-cell *matHeaderCellDef> Amount Deposited </th>\n          <td mat-cell *matCellDef=\"let element\"> <h3>{{element.amountDeposited}} </h3></td>\n        </ng-container> -->\n\n<!-- Symbol Column -->\n<!-- <ng-container matColumnDef=\"account_noOfDepositor\">\n          <th mat-header-cell *matHeaderCellDef> Sender's Account Number</th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.account_noOfDepositor}} </td>\n        </ng-container>\n      \n        <ng-container matColumnDef=\"refNo\">\n            <th mat-header-cell *matHeaderCellDef>  Reference number</th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.refNo}} </td>\n          </ng-container>\n          <ng-container matColumnDef=\"dateOfTransaction\">\n            <th mat-header-cell *matHeaderCellDef>Date of Transaction</th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.dateOfTransaction}} </td>\n          </ng-container>\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n      </table> -->\n<!-- <> -->";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/sterpay/sterpay.component.html":
+  /*!**************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sterpay/sterpay.component.html ***!
+    \**************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppSterpaySterpayComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<section *ngIf=\"show=== true\">\n    <h1>Your Payments Details</h1>\n\n    <div>\n        <label>Name of Depositor</label>\n    <h6> {{nameOfDep}}</h6>\n    </div>\n    \n    <div>\n        <label>Santsi ID of Depositor</label>\n        <h6>{{accoutNoD}}</h6>\n    </div>\n    <div>\n        <label>Amount To be Deposited</label>\n        <h6>{{amt}}</h6>\n    </div>\n    <div>\n        <label>Receipient Name</label>\n\n        <h6>{{nameOfRec}}</h6>\n    </div>\n    <div>\n        <label>Santsi ID of Depositor</label>\n\n        <h6>{{accoutNoR}}</h6>\n    </div>\n    <div>\n        <label>Bank Account Number of Receipient</label>\n        <h6>{{bankAcct}}</h6>\n    </div>\n    <div>\n        <label>Reference Number</label>\n        <h6>{{refNo}}</h6>\n    </div>\n    <button (click)=\"check()\">pay now</button>\n</section>\n<button (click)=\"show=!show\" *ngIf=\"show === false\">View Transaction Details</button>\n<app-button text=\"{{'Message: ' + this.pol.message + '\\n' + 'Response Text: ' +\n this.pol.data.ResponseText}}\" *ngIf=\"this.sho === true\" id=\"koo\" (ok)=\"mov($event)\" >\n    Ok\n</app-button>";
     /***/
   },
 
@@ -1498,7 +1538,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     var _chooser_chooser_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
     /*! ./chooser/chooser.component */
-    "./src/app/chooser/chooser.component.ts"); // import { MatToolbarModule } from '@angular/material/toolbar'
+    "./src/app/chooser/chooser.component.ts");
+    /* harmony import */
+
+
+    var _sterpay_sterpay_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    /*! ./sterpay/sterpay.component */
+    "./src/app/sterpay/sterpay.component.ts"); // import { MatToolbarModule } from '@angular/material/toolbar'
     // import { MatSliderModule } from '@angular/material/slider';
     // import { MatButtonModule } from '@angular/material/button';
     // import { MatSidenavModule } from "@angular/material/sidenav";
@@ -1513,7 +1559,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _enrol_enrol_component__WEBPACK_IMPORTED_MODULE_11__["EnrolComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"], _loan_loan_component__WEBPACK_IMPORTED_MODULE_13__["LoanComponent"], _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_14__["LoanStatusComponent"], _deposit_deposit_component__WEBPACK_IMPORTED_MODULE_15__["DepositComponent"], _vc_vc_component__WEBPACK_IMPORTED_MODULE_16__["VCComponent"], _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_17__["ReceiptComponent"], _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_18__["WithdrawComponent"], _chooser_directive__WEBPACK_IMPORTED_MODULE_21__["ChooserDirective"], _display_directive__WEBPACK_IMPORTED_MODULE_22__["DisplayDirective"], _button_button_component__WEBPACK_IMPORTED_MODULE_23__["ButtonComponent"], _chooser_chooser_component__WEBPACK_IMPORTED_MODULE_24__["ChooserComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _enrol_enrol_component__WEBPACK_IMPORTED_MODULE_11__["EnrolComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"], _loan_loan_component__WEBPACK_IMPORTED_MODULE_13__["LoanComponent"], _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_14__["LoanStatusComponent"], _deposit_deposit_component__WEBPACK_IMPORTED_MODULE_15__["DepositComponent"], _vc_vc_component__WEBPACK_IMPORTED_MODULE_16__["VCComponent"], _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_17__["ReceiptComponent"], _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_18__["WithdrawComponent"], _chooser_directive__WEBPACK_IMPORTED_MODULE_21__["ChooserDirective"], _display_directive__WEBPACK_IMPORTED_MODULE_22__["DisplayDirective"], _button_button_component__WEBPACK_IMPORTED_MODULE_23__["ButtonComponent"], _chooser_chooser_component__WEBPACK_IMPORTED_MODULE_24__["ChooserComponent"], _sterpay_sterpay_component__WEBPACK_IMPORTED_MODULE_25__["SterpayComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], _angular_common__WEBPACK_IMPORTED_MODULE_20__["CommonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSlideToggleModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatExpansionModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatProgressSpinnerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSliderModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonToggleModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatNativeDateModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatRippleModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatRadioModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableModule"], _ngmodule_material_carousel__WEBPACK_IMPORTED_MODULE_5__["MatCarouselModule"].forRoot(), angular4_paystack__WEBPACK_IMPORTED_MODULE_19__["Angular4PaystackModule"].forRoot('pk_test_c5bc80647b60c1bf05f3f6fdac32a99f82b598ce'), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
       exports: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"]],
       providers: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"]],
@@ -1538,7 +1584,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "section{\r\n    position: fixed;\r\n    top: 2px;\r\n    z-index: 7;\r\n    background: white;\r\n    color: black;\r\n    padding: 3%;\r\n    border-radius: 10px;\r\n    max-width: -webkit-fit-content;\r\n    max-width: -moz-fit-content;\r\n    max-width: fit-content;\r\n    min-width: -webkit-fit-content;\r\n    min-width: -moz-fit-content;\r\n    min-width: fit-content;\r\n    right: 25%;\r\n    left: 25%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnV0dG9uL2J1dHRvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtJQUNmLFFBQVE7SUFDUixVQUFVO0lBQ1YsaUJBQWlCO0lBQ2pCLFlBQVk7SUFDWixXQUFXO0lBQ1gsbUJBQW1CO0lBQ25CLDhCQUFzQjtJQUF0QiwyQkFBc0I7SUFBdEIsc0JBQXNCO0lBQ3RCLDhCQUFzQjtJQUF0QiwyQkFBc0I7SUFBdEIsc0JBQXNCO0lBQ3RCLFVBQVU7SUFDVixTQUFTO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC9idXR0b24vYnV0dG9uLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJzZWN0aW9ue1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgdG9wOiAycHg7XHJcbiAgICB6LWluZGV4OiA3O1xyXG4gICAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICBwYWRkaW5nOiAzJTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBtYXgtd2lkdGg6IGZpdC1jb250ZW50O1xyXG4gICAgbWluLXdpZHRoOiBmaXQtY29udGVudDtcclxuICAgIHJpZ2h0OiAyNSU7XHJcbiAgICBsZWZ0OiAyNSU7XHJcbn0iXX0= */";
+    __webpack_exports__["default"] = "section{\r\n    position: fixed;\r\n    top: 200px;\r\n    z-index: 10;\r\n    background: white;\r\n    color: black;\r\n    padding: 3%;\r\n    border-radius: 10px;\r\n    max-width: -webkit-fit-content;\r\n    max-width: -moz-fit-content;\r\n    max-width: fit-content;\r\n    right: 25%;\r\n    left: 25%;\r\n    word-wrap: break-word;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnV0dG9uL2J1dHRvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtJQUNmLFVBQVU7SUFDVixXQUFXO0lBQ1gsaUJBQWlCO0lBQ2pCLFlBQVk7SUFDWixXQUFXO0lBQ1gsbUJBQW1CO0lBQ25CLDhCQUFzQjtJQUF0QiwyQkFBc0I7SUFBdEIsc0JBQXNCO0lBQ3RCLFVBQVU7SUFDVixTQUFTO0lBQ1QscUJBQXFCO0FBQ3pCIiwiZmlsZSI6InNyYy9hcHAvYnV0dG9uL2J1dHRvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsic2VjdGlvbntcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIHRvcDogMjAwcHg7XHJcbiAgICB6LWluZGV4OiAxMDtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgcGFkZGluZzogMyU7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgbWF4LXdpZHRoOiBmaXQtY29udGVudDtcclxuICAgIHJpZ2h0OiAyNSU7XHJcbiAgICBsZWZ0OiAyNSU7XHJcbiAgICB3b3JkLXdyYXA6IGJyZWFrLXdvcmQ7XHJcbn0iXX0= */";
     /***/
   },
 
@@ -1637,12 +1683,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var ChooserDirective = function ChooserDirective() {
-      _classCallCheck(this, ChooserDirective);
-    };
+    var ChooserDirective = /*#__PURE__*/function () {
+      function ChooserDirective() {
+        _classCallCheck(this, ChooserDirective);
+      }
 
-    ChooserDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
-      selector: '[appChooser]'
+      _createClass(ChooserDirective, [{
+        key: "check",
+        value: function check() {
+          console.info(this.amt);
+        }
+      }]);
+
+      return ChooserDirective;
+    }();
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ChooserDirective.prototype, "amt", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ChooserDirective.prototype, "refNo", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ChooserDirective.prototype, "nameOfDep", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ChooserDirective.prototype, "nameOfRec", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ChooserDirective.prototype, "accoutNoR", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ChooserDirective.prototype, "accoutNoD", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ChooserDirective.prototype, "bankAcct", void 0);
+    ChooserDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: '[app-chooser]',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./chooser.directive.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/chooser.directive.html"))["default"]
     })], ChooserDirective);
     /***/
   },
@@ -1846,58 +1913,66 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.fb = fb;
         this.pS = pS;
         this.addressForm = this.fb.group({
+          acct: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(10)])],
           pmtType: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
           amount: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
           acctNo: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
         });
+        this.ddee = false;
+        this.oko = false;
         this.show = false;
         this.pmtType = [{
-          name: 'Card',
-          abbreviation: 'Card'
+          name: 'Bannk Account Transfer',
+          abbreviation: 'BAT'
+        }, {
+          name: 'Agent',
+          abbreviation: 'agent'
         }, {
           name: 'airtime',
           abbreviation: 'airtime'
         }];
         this.amounts = [{
           name: '200,000',
-          abbreviation: '20000000'
+          abbreviation: '200000'
         }, {
           name: '180,000',
-          abbreviation: '10000000'
+          abbreviation: '100000'
         }, {
           name: '170,000',
-          abbreviation: '17000000'
+          abbreviation: '170000'
         }, {
           name: '150,000',
-          abbreviation: '15000000'
+          abbreviation: '150000'
         }, {
           name: '130,000',
-          abbreviation: '13000000'
+          abbreviation: '130000'
         }, {
           name: '120,000',
-          abbreviation: '12000000'
+          abbreviation: '120000'
         }, {
           name: '100,000',
-          abbreviation: '10000000'
+          abbreviation: '100000'
         }, {
           name: '70,000',
-          abbreviation: '7000000'
+          abbreviation: '70000'
         }, {
           name: '50,000',
-          abbreviation: '5000000'
+          abbreviation: '50000'
         }, {
           name: '20,000',
-          abbreviation: '2000000'
+          abbreviation: '20000'
         }, {
           name: '10,000',
-          abbreviation: '1000000'
+          abbreviation: '10000'
         }, {
           name: '5,000',
-          abbreviation: '500000'
+          abbreviation: '5000'
         }, {
           name: '1,000',
-          abbreviation: '100000'
+          abbreviation: '1000'
         }];
+        this.printShow = false;
+        this.notif = false;
       }
 
       _createClass(DepositComponent, [{
@@ -1926,9 +2001,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           this.l.back();
         }
       }, {
+        key: "vrf",
+        value: function vrf() {
+          var _this = this;
+
+          if (this.addressForm.get('acct').valid) {
+            this.pS.nameEnq(this.addressForm.get('acct').value).subscribe(function (e) {
+              if (_this.addressForm.get('acct').value != e['data']['AccountNumber']) {
+                _this.ddee = true;
+              } else {
+                _this.vrfAccount = e['data']['AccountNumber'];
+                _this.vrfMsg = e['message'];
+                _this.VrfStatus = e['data']['status'];
+                _this.oko = true;
+              }
+            });
+          }
+        }
+      }, {
         key: "chkAcctNo",
         value: function chkAcctNo() {
-          var _this = this;
+          var _this2 = this;
 
           if (this.addressForm.get('acctNo').value == null) {
             this.show = false;
@@ -1936,31 +2029,72 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           }
 
           this.pS.chAcct(this.addressForm.get('acctNo').value).subscribe(function (s) {
-            if (s['code'] == 0) _this.show = false;
-            _this.b = s;
-            console.log(_this.b);
-            _this.show = true;
+            if (s['code'] == 0) _this2.show = false;
+            _this2.b = s;
+            _this2.show = true;
           });
         }
       }, {
         key: "paymentCancel",
         value: function paymentCancel() {
           alert('you cancelled your deposit');
-        }
+        } // pmtDone(){
+        // }
+
       }, {
         key: "paymentDone",
         value: function paymentDone() {
-          this.pS.sav(this.addressForm.get('amount').value, this.ref, this.s.checkLogUser()).subscribe(function (a) {
-            console.info(a);
-          });
-          this.r.navigateByUrl('home');
+          this.pS.sav(this.addressForm.get('amount').value, this.ref, {
+            nod: this.s.checkLogUser()['fullName'],
+            aod: this.s.checkLogUser()['account_no'],
+            aor: this.s.checkLogUser()['account_no'],
+            nor: this.s.checkLogUser()['fullName']
+          }, this.addressForm.get('acct').value);
         }
       }, {
         key: "chkLog",
         value: function chkLog() {
           if (this.s.checkLogUser() == null || undefined) this.r.navigateByUrl('login');
-          this.h = this.s.checkLogUser()['email'] || JSON.parse(localStorage.getItem("user"))['email'];
+          this.h = this.s.checkLogUser() || JSON.parse(localStorage.getItem("user"));
           console.info(this.h);
+        }
+      }, {
+        key: "genID",
+        value: function genID() {
+          var _this3 = this;
+
+          var rkg = {
+            aod: this.s.checkLogUser()['account_no'],
+            nod: this.s.checkLogUser()['fullName'],
+            amt: this.addressForm.get('amount').value,
+            nor: this.b['name'],
+            aor: this.addressForm.get('acctNo').value
+          };
+          this.pS.genID(rkg).subscribe(function (r) {
+            console.info(r);
+            _this3.tranId = r['transcID'];
+            _this3.printShow = true;
+            _this3.notif = true;
+          });
+        }
+      }, {
+        key: "genIDp",
+        value: function genIDp() {
+          var _this4 = this;
+
+          var rkg = {
+            aod: this.s.checkLogUser()['account_no'],
+            nod: this.s.checkLogUser()['fullName'],
+            amt: this.addressForm.get('amount').value,
+            nor: this.s.checkLogUser()['fullName'],
+            aor: this.s.checkLogUser()['account_no']
+          };
+          this.pS.genID(rkg).subscribe(function (r) {
+            console.info(r);
+            _this4.notif = true;
+            _this4.tranId = r['transID'];
+            _this4.printShow = true;
+          });
         }
       }]);
 
@@ -2217,7 +2351,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this2 = this;
+          var _this5 = this;
 
           console.info(this.addressForm.value);
 
@@ -2227,16 +2361,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               switch (s['code']) {
                 case 1:
                   {
-                    _this2.hu = s;
-                    _this2.show = true; // alert()
+                    _this5.hu = s;
+                    _this5.show = true; // alert()
                     // this.d.getElementById('dialog').showModal();
 
                     var r = confirm(s['msg'] + +"\n" + "You account no " + s['user']['account_no'] + "\n" + "Make sure you keep it safe");
 
                     if (r == true) {
-                      _this2.r.navigateByUrl('login');
+                      _this5.r.navigateByUrl('login');
                     } else {
-                      _this2.r.navigateByUrl('login');
+                      _this5.r.navigateByUrl('login');
                     }
                   }
                   break;
@@ -2244,8 +2378,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 case 0:
                   {
                     r = confirm(s['msg']);
-                    _this2.hu = s;
-                    _this2.show = true; // this.d.getElementsByClassName('dialog')
+                    _this5.hu = s;
+                    _this5.show = true; // this.d.getElementsByClassName('dialog')
                     // this.d.getElementById('dialog').showModal();
                     // g.
 
@@ -2496,17 +2630,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.d = d;
         this.s = s;
         this.r = r;
-        this.slides = [{
-          'image': "<div st>"
-        }, {
-          'image': 'https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Middle%20East%20and%20Africa/Harnessing%20Nigerias%20fintech%20potential/Nigerian-1536x1536.jpg'
-        }, {
-          'image': 'https://nairametrics.com/wp-content/uploads/2020/05/Poor-Nigerians.jpg'
-        }, {
-          'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTET-S4CkaG2-PmAc6_5_2VdsCk0OpN5FzBog&usqp=CAU'
-        }, {
-          'image': 'https://cms.qz.com/wp-content/uploads/2018/10/northern-women-e1540987943534.jpg'
-        }];
         this.show = false;
         this.o = 'Would like to view this app in hausa';
       }
@@ -2683,28 +2806,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "acceptLoan",
         value: function acceptLoan(d) {
-          var _this3 = this;
+          var _this6 = this;
 
           var k = confirm('Are you sure you want to accept the loan');
           if (k == false) return;else {
             this.s.acpOff(d).subscribe(function (e) {
               var d = confirm(e['a']);
-              if (d == true) _this3.e = _this3.s.loanHis();
-              _this3.e = _this3.s.loanHis();
+              if (d == true) _this6.e = _this6.s.loanHis();
+              _this6.e = _this6.s.loanHis();
             });
           }
         }
       }, {
         key: "rejectLoan",
         value: function rejectLoan(d) {
-          var _this4 = this;
+          var _this7 = this;
 
           var k = confirm('Are you sure you want to reject the loan');
           if (k == false) return;else {
             this.s.rejOff(d).subscribe(function (e) {
               var d = confirm(e['a']);
-              if (d == true) _this4.e = _this4.s.loanHis();
-              _this4.e = _this4.s.loanHis();
+              if (d == true) _this7.e = _this7.s.loanHis();
+              _this7.e = _this7.s.loanHis();
             });
           }
         }
@@ -2890,12 +3013,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "vrf",
         value: function vrf() {
-          var _this5 = this;
+          var _this8 = this;
 
           this.show = true;
           this.ls.vrfBvn(this.addressForm.get('bvn').value, JSON.parse(localStorage.getItem("user"))['account_no']);
           setTimeout(function () {
-            _this5.chkLog();
+            _this8.chkLog();
           }, 5000);
         }
       }, {
@@ -2915,14 +3038,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this6 = this;
+          var _this9 = this;
 
           this.d.getElementById('loader').classList.add('show');
           this.ls.loan(this.addressForm.value).subscribe(function (s) {
             var r = confirm('successfully submitted' + "\n" + "This is your Loan ID" + "\n" + s['loanId']);
-            if (r == true) _this6.r.navigateByUrl('loanstatus');
+            if (r == true) _this9.r.navigateByUrl('loanstatus');
 
-            _this6.r.navigateByUrl('loanstatus');
+            _this9.r.navigateByUrl('loanstatus');
           });
         }
       }]);
@@ -3082,13 +3205,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "login",
         value: function login() {
-          var _this7 = this;
+          var _this10 = this;
 
           this.d.getElementById('loader').classList.add('show');
           this.s.login(this.addressForm.value).subscribe(function (d) {
-            _this7.d.getElementById('koo').classList.add('show');
+            _this10.d.getElementById('koo').classList.add('show');
 
-            _this7.kll(d);
+            _this10.kll(d);
           });
         }
       }, {
@@ -3183,14 +3306,48 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.r = r; // server = 'http://localhost:3000/';
 
         this.server = 'https://api-sansti-kudi.herokuapp.com/';
-      }
+      } // sav(a:string,b:string,user:{}){
+      //   var headers = new HttpHeaders();
+      //   headers.append('Content-Type', 'applicatiion/json');
+      //    this.Http.get(
+      //     this.server +
+      //      'updAcct/'+a+'/'+b+
+      //      '/'+user['nod']+
+      //      '/'+user['aod']+
+      //      '/'+user['aor']+
+      //      '/'+user['nor'],
+      //       { headers: headers });
+      //       this.intBankTrans()
+      // }
+
 
       _createClass(PoissonService, [{
         key: "sav",
-        value: function sav(a, b, user) {
+        value: function sav(a, b, user, acct) {
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Content-Type', 'applicatiion/json');
-          return this.Http.get(this.server + 'updAcct/' + a + '/' + b + '/' + user['fullName'] + '/' + user['account_no'] + '/' + user['account_no'] + '/' + user['fullName'], {
+          this.Http.get(this.server + 'updAcct/' + a + '/' + b + '/' + user['nod'] + '/' + user['aod'] + '/' + user['aor'] + '/' + user['nor'], {
+            headers: headers
+          }).subscribe(function (e) {
+            console.info(e);
+          });
+          return this.intBankTrans(acct, a);
+        }
+      }, {
+        key: "intBankTrans",
+        value: function intBankTrans(acctNo, amt) {
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+          headers.append('Content-Type', 'applicatiion/json');
+          return this.Http.get(this.server + 'intBankEnq/' + acctNo + "/" + amt, {
+            headers: headers
+          });
+        }
+      }, {
+        key: "genID",
+        value: function genID(g) {
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+          headers.append('Content-Type', 'applicatiion/json');
+          return this.Http.post(this.server + 'genTranID', g, {
             headers: headers
           });
         }
@@ -3315,6 +3472,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             headers: headers
           });
         }
+      }, {
+        key: "nameEnq",
+        value: function nameEnq(acctNo) {
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+          headers.append('Content-Type', 'applicatiion/json');
+          return this.Http.get(this.server + 'nameEnq/' + acctNo, {
+            headers: headers
+          });
+        }
       }]);
 
       return PoissonService;
@@ -3434,13 +3600,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "chkLog",
         value: function chkLog() {
-          var _this8 = this;
+          var _this11 = this;
 
           this.pS.retrAcctBal(this.s.checkLogUser()).subscribe(function (e) {
-            _this8.a = e;
+            _this11.a = e;
           });
           this.pS.retrCred(this.s.checkLogUser()).subscribe(function (e) {
-            _this8.aa = e;
+            _this11.aa = e;
           });
         }
       }, {
@@ -3595,6 +3761,137 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     RegLogService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injectable"])({
       providedIn: 'root'
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"]))], RegLogService);
+    /***/
+  },
+
+  /***/
+  "./src/app/sterpay/sterpay.component.css":
+  /*!***********************************************!*\
+    !*** ./src/app/sterpay/sterpay.component.css ***!
+    \***********************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppSterpaySterpayComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "button{\r\n    font-family: inherit;\r\n    background: #69f0ae;\r\n    outline: none;\r\n    border: none;\r\n    padding: 10px;\r\n    width: 100%;\r\n    border-radius: 20px;\r\n}\r\nsection{\r\n    padding: 20px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RlcnBheS9zdGVycGF5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxvQkFBb0I7SUFDcEIsbUJBQW1CO0lBQ25CLGFBQWE7SUFDYixZQUFZO0lBQ1osYUFBYTtJQUNiLFdBQVc7SUFDWCxtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLGFBQWE7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9zdGVycGF5L3N0ZXJwYXkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJ1dHRvbntcclxuICAgIGZvbnQtZmFtaWx5OiBpbmhlcml0O1xyXG4gICAgYmFja2dyb3VuZDogIzY5ZjBhZTtcclxuICAgIG91dGxpbmU6IG5vbmU7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBib3JkZXItcmFkaXVzOiAyMHB4O1xyXG59XHJcbnNlY3Rpb257XHJcbiAgICBwYWRkaW5nOiAyMHB4O1xyXG59Il19 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/sterpay/sterpay.component.ts":
+  /*!**********************************************!*\
+    !*** ./src/app/sterpay/sterpay.component.ts ***!
+    \**********************************************/
+
+  /*! exports provided: SterpayComponent */
+
+  /***/
+  function srcAppSterpaySterpayComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SterpayComponent", function () {
+      return SterpayComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _poisson_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../poisson.service */
+    "./src/app/poisson.service.ts");
+
+    var SterpayComponent = /*#__PURE__*/function () {
+      function SterpayComponent(s, r) {
+        _classCallCheck(this, SterpayComponent);
+
+        this.s = s;
+        this.r = r;
+        this.show = false;
+        this.sho = false;
+      }
+
+      _createClass(SterpayComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "check",
+        value: function check() {
+          var _this12 = this;
+
+          if (this.nameOfRec || this.accoutNoR == null) {}
+
+          this.s.sav(this.amt, this.refNo, {
+            nod: this.nameOfDep,
+            aod: this.accoutNoD,
+            aor: this.accoutNoR,
+            nor: this.nameOfRec
+          }, this.bankAcct).subscribe(function (po) {
+            _this12.pol = po;
+            _this12.sho = true;
+          });
+        }
+      }, {
+        key: "mov",
+        value: function mov() {
+          this.r.navigateByUrl('account_balance');
+        }
+      }]);
+
+      return SterpayComponent;
+    }();
+
+    SterpayComponent.ctorParameters = function () {
+      return [{
+        type: _poisson_service__WEBPACK_IMPORTED_MODULE_3__["PoissonService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }];
+    };
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SterpayComponent.prototype, "amt", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SterpayComponent.prototype, "refNo", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SterpayComponent.prototype, "nameOfDep", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SterpayComponent.prototype, "nameOfRec", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SterpayComponent.prototype, "accoutNoR", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SterpayComponent.prototype, "accoutNoD", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SterpayComponent.prototype, "bankAcct", void 0);
+    SterpayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-sterpay',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./sterpay.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/sterpay/sterpay.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./sterpay.component.css */
+      "./src/app/sterpay/sterpay.component.css"))["default"]]
+    })], SterpayComponent);
     /***/
   },
 
@@ -3754,10 +4051,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this9 = this;
+          var _this13 = this;
 
           this.s.submitOffer(this.addressForm.value).subscribe(function (s) {
-            _this9.e = _this9.s.loans();
+            _this13.e = _this13.s.loans();
             var tr = confirm('your offer was succefully summtted');
             if (tr == true) return;
             return;
@@ -3889,14 +4186,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(WithdrawComponent, [{
         key: "withdraw",
         value: function withdraw() {
-          var _this10 = this;
+          var _this14 = this;
 
           this.s.withdraw(this.addressForm.get('amount').value).subscribe(function (e) {
             if (confirm(e.msg) == true) {
-              _this10.r.navigateByUrl('account_balance');
+              _this14.r.navigateByUrl('account_balance');
             }
 
-            _this10.r.navigateByUrl('account_balance');
+            _this14.r.navigateByUrl('account_balance');
           });
         }
       }, {
