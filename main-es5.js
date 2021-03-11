@@ -3290,13 +3290,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     "./node_modules/@angular/router/fesm2015/router.js");
 
     var PoissonService = /*#__PURE__*/function () {
-      // server = 'https://api-sansti-kudi.herokuapp.com/'
       function PoissonService(Http, r) {
         _classCallCheck(this, PoissonService);
 
         this.Http = Http;
-        this.r = r;
-        this.server = 'http://localhost:3000/';
+        this.r = r; // server = 'http://localhost:3000/';
+
+        this.server = 'https://api-sansti-kudi.herokuapp.com/';
       } // sav(a:string,b:string,user:{}){
       //   var headers = new HttpHeaders();
       //   headers.append('Content-Type', 'applicatiion/json');
@@ -3684,14 +3684,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     "./node_modules/@angular/router/fesm2015/router.js");
 
     var RegLogService = /*#__PURE__*/function () {
-      //  server =      'https://api-sansti-kudi.herokuapp.com/'
       function RegLogService(d, Http, r) {
         _classCallCheck(this, RegLogService);
 
         this.d = d;
         this.Http = Http;
-        this.r = r;
-        this.server = 'http://localhost:3000/';
+        this.r = r; // server = 'http://localhost:3000/';
+
+        this.server = 'https://api-sansti-kudi.herokuapp.com/';
       }
 
       _createClass(RegLogService, [{

@@ -1946,11 +1946,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PoissonService = class PoissonService {
-    // server = 'https://api-sansti-kudi.herokuapp.com/'
     constructor(Http, r) {
         this.Http = Http;
         this.r = r;
-        this.server = 'http://localhost:3000/';
+        // server = 'http://localhost:3000/';
+        this.server = 'https://api-sansti-kudi.herokuapp.com/';
     }
     // sav(a:string,b:string,user:{}){
     //   var headers = new HttpHeaders();
@@ -2181,12 +2181,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let RegLogService = class RegLogService {
-    //  server =      'https://api-sansti-kudi.herokuapp.com/'
     constructor(d, Http, r) {
         this.d = d;
         this.Http = Http;
         this.r = r;
-        this.server = 'http://localhost:3000/';
+        // server = 'http://localhost:3000/';
+        this.server = 'https://api-sansti-kudi.herokuapp.com/';
     }
     reg(data) {
         console.info(data);
