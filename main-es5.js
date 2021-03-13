@@ -173,7 +173,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Enrol to santsi Kudii</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>User Information</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                    <mat-error *ngIf=\"addressForm.controls['firstName'].hasError('invalid')\">\n                        First name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                    <mat-error *ngIf=\"addressForm.controls['lastName'].hasError('invalid')\">\n                        Last name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <textarea matInput placeholder=\"Address\" formControlName=\"address\"></textarea>\n                        <mat-error *ngIf=\"addressForm.controls['address'].hasError('invalid')\">\n                            Address is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"email\" placeholder=\"email\" formControlName=\"email\">\n                    <mat-error *ngIf=\"addressForm.controls['email'].hasError('invalid')\">\n                        email is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"number\" formControlName=\"contact\">\n                    <mat-error *ngIf=\"addressForm.controls['contact'].hasError('invalid')\">\n                        Phone no. is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row \">\n                <mat-form-field color=\"accent\"class=\"full-width\" appearance=\"fill\">\n                    <mat-label>Summary of Business</mat-label>\n                    <textarea matInput formControlName=\"abtBiz\"></textarea>\n                    <mat-error *ngIf=\"addressForm.controls['abtBiz'].hasError('invalid')\">\n                        About Business is <strong>Required</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"select account type\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.abbreviation\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            account type <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"State\" formControlName=\"state\">\n                            <mat-option *ngFor=\"let state of states\" [value]=\"state.abbreviation\">\n                                {{ state.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['state'].hasError('invalid')\">\n                            State is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n\n            <div>\n                <label>choose a strong password of atleast 6 characters</label>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"password\" formControlName=\"pwd\">\n                    <mat-error *ngIf=\"addressForm.controls['pwd'].hasError('invalid')\">\n                        Password is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-actions>\n            <button mat-raised-button color=\"accent\" type=\"submit\">Submit</button>\n        </mat-card-actions>\n    </mat-card>\n</form>\n<dialog id=\"dialog\" *ngIf=\"show === true\" style=\"position: absolute;top: 0;bottom: 0;\">\n\n    <i><b>Your response</b></i>\n\n    <h1>{{this.hu['msg']}}</h1>\n    <h1>\n        {{this.hu['user']['account_no']}}</h1>\n    <button mat-button-raise>\n        ok\n    </button>\n</dialog>\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>\n<app-button *ngIf=\"this.show === true\" text=\"{{`You are successfully Registered on santsi Kudi \nYour account number this.hu['user']['account_no'] was sent to your email`}}\"\n (ok)=\"login($event)\" >\n    Ok\n</app-button>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Enrol to santsi Kudii</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>User Information</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                    <mat-error *ngIf=\"addressForm.controls['firstName'].hasError('invalid')\">\n                        First name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                    <mat-error *ngIf=\"addressForm.controls['lastName'].hasError('invalid')\">\n                        Last name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <textarea matInput placeholder=\"Address\" formControlName=\"address\"></textarea>\n                        <mat-error *ngIf=\"addressForm.controls['address'].hasError('invalid')\">\n                            Address is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"email\" placeholder=\"email\" formControlName=\"email\">\n                    <mat-error *ngIf=\"addressForm.controls['email'].hasError('invalid')\">\n                        email is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"number\" formControlName=\"contact\">\n                    <mat-error *ngIf=\"addressForm.controls['contact'].hasError('invalid')\">\n                        Phone no. is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row \">\n                <mat-form-field color=\"accent\"class=\"full-width\" appearance=\"fill\">\n                    <mat-label>Summary of Business</mat-label>\n                    <textarea matInput formControlName=\"abtBiz\"></textarea>\n                    <mat-error *ngIf=\"addressForm.controls['abtBiz'].hasError('invalid')\">\n                        About Business is <strong>Required</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"select account type\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.abbreviation\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            account type <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"State\" formControlName=\"state\">\n                            <mat-option *ngFor=\"let state of states\" [value]=\"state.abbreviation\">\n                                {{ state.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['state'].hasError('invalid')\">\n                            State is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n\n            <div>\n                <label>choose a strong password of atleast 6 characters</label>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"password\" formControlName=\"pwd\">\n                    <mat-error *ngIf=\"addressForm.controls['pwd'].hasError('invalid')\">\n                        Password is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-actions>\n            <button mat-raised-button color=\"accent\" type=\"submit\">Submit</button>\n        </mat-card-actions>\n    </mat-card>\n</form>\n<dialog id=\"dialog\" *ngIf=\"show === true\" style=\"position: absolute;top: 0;bottom: 0;\">\n\n    <i><b>Your response</b></i>\n\n    <h1>{{this.hu['msg']}}</h1>\n    <h1>\n        {{this.hu['user']['account_no']}}</h1>\n    <button mat-button-raise>\n        ok\n    </button>\n</dialog>\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>\n<app-button *ngIf=\"this.show === true\" text=\"{{this.ii}}\"\n (ok)=\"login($event)\" >\n    Ok\n</app-button>";
     /***/
   },
 
@@ -233,7 +233,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent'>\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>loan</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Loan</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n   \n    <mat-card-content id=\"bvn\" style=\"visibility: hidden;\" >\n        <p>\n            <mat-form-field color=\"accent\"appearance=\"outline\">\n                <mat-label>Verify your BVN</mat-label>\n                <input matInput type=\"number\" placeholder=\"BVN\"  (blur)=\"vrf()\"formControlName=\"bvn\">\n               <mat-hint>note that: only the BVN assigned on the sandbox can be used, which is <b>12345678901</b></mat-hint>\n            </mat-form-field>\n            &nbsp;<mat-hint *ngIf=\"this.show === true\">Verifying . . .</mat-hint>\n            &nbsp;<mat-hint *ngIf = \"this.sho === true\" style=\"color: #69f0ae;\">Verified</mat-hint>\n        </p>\n        \n    </mat-card-content>\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>Loan Information</mat-card-title>\n        </mat-card-header>\n\n        <i *ngIf=\"this.oko === false\" >Retrieving Bank Account Info . . .</i>\n\n            <mat-list role=\"list\" *ngIf=\"this.oko === true\">\n                <mat-list-item role=\"listitem\">\n                    <h6>Account Number</h6>&nbsp; &nbsp;{{this.vrfAccount}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Message</h6>&nbsp; &nbsp;{{this.vrfMsg}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Account Status</h6>&nbsp; &nbsp;{{this.VrfStatus}}\n                </mat-list-item>\n            </mat-list>\n            \n        <mat-card-content id=\"loanForm\"  style=\"visibility: hidden;\">\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>Reason for Loan</mat-label>\n                        <input matInput placeholder=\"Reason for laon\" formControlName=\"reason\">\n                        <mat-hint>e.g Start Up, Expansion, Staff Remuneration</mat-hint>\n                        <mat-error *ngIf=\"addressForm.controls['reason'].hasError('invalid')\">\n                            Reason is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n            <br>\n            <br>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>Amount</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Amount\" formControlName=\"amount\">\n                        <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                            Amount is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div><br>\n\n            <mat-form-field color=\"accent\"class=\"full-width\">\n                <mat-label>Suummarise your loan request here</mat-label>\n                <textarea rows=\"8\" matInput placeholder=\"Summary of loan\" formControlName=\"summary\"></textarea>\n                <mat-error *ngIf=\"addressForm.controls['summary'].hasError('invalid')\">\n                    Summary is <strong>required</strong>\n                </mat-error>\n            </mat-form-field>\n\n            <br>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>select Duration of Loan</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"duration\">\n                            <mat-option *ngFor=\"let duration of durations\" [value]=\"duration.name\">\n                                {{ duration.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            Duration<strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>select affordable interest rate</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.name\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            interest rate<strong>required</strong>\n                        </mat-error>\n                        <mat-hint>select affordable interest rate</mat-hint>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n            <mat-card-actions>\n                <button mat-raised-button color=\"accent\" type=\"submit\">Submit Request</button>\n            </mat-card-actions>\n        </mat-card-content>\n      \n    </mat-card>\n</form>\n\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent'>\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>loan</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Loan</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n   \n    <mat-card-content id=\"bvn\" style=\"visibility: hidden;\" >\n        <p>\n            <mat-form-field color=\"accent\"appearance=\"outline\">\n                <mat-label>Verify your BVN</mat-label>\n                <input matInput type=\"number\" placeholder=\"BVN\"  (blur)=\"vrf()\"formControlName=\"bvn\">\n               <mat-hint>note that: only the BVN assigned on the sandbox can be used, which is <b>12345678901</b></mat-hint>\n            </mat-form-field>\n            &nbsp;<mat-hint *ngIf=\"this.show === true\">Verifying . . .</mat-hint>\n            &nbsp;<mat-hint *ngIf = \"this.sho === true\" style=\"color:red;\">Input the BVN Assigned in the SandBox which is 12345678901</mat-hint>\n        </p>\n        \n    </mat-card-content>\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>Loan Information</mat-card-title>\n        </mat-card-header>\n            <mat-list role=\"list\" *ngIf=\"this.sjo === true\" id=\"lok\">\n                <mat-list-item role=\"listitem\">\n                    <h6>Response Code</h6>&nbsp; &nbsp;{{this.bvnn['ResponseCode']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>BVN</h6>&nbsp; &nbsp;{{this.bvnn['BVN']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>First Name</h6>&nbsp; &nbsp;{{this.bvnn['FirstName']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Middle Name</h6>&nbsp; &nbsp;{{this.bvnn['MiddleName']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Last Name</h6>&nbsp; &nbsp;{{this.bvnn['LastName']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Date of Birth</h6>&nbsp; &nbsp;{{this.bvnn['DateOfBirth']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Contact</h6>&nbsp; &nbsp;{{this.bvnn['PhoneNumber']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Date of Registration</h6>&nbsp; &nbsp;{{this.bvnn['RegistrationDate']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Enrolment Bank Code</h6>&nbsp; &nbsp;{{this.bvnn['EnrollmentBank']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Bank Branch Enrolled</h6>&nbsp; &nbsp;{{this.bvnn['EnrollmentBranch']}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Is User on Watchlist</h6>&nbsp; &nbsp;{{this.bvnn['WatchListed']}}\n                </mat-list-item>\n                <button mat-button color=\"accent\" (click)=\"hg()\">Proceed</button>\n            </mat-list>\n            \n        <mat-card-content id=\"loanForm\"  style=\"visibility: hidden;\">\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>Reason for Loan</mat-label>\n                        <input matInput placeholder=\"Reason for laon\" formControlName=\"reason\">\n                        <mat-hint>e.g Start Up, Expansion, Staff Remuneration</mat-hint>\n                        <mat-error *ngIf=\"addressForm.controls['reason'].hasError('invalid')\">\n                            Reason is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n            <br>\n            <br>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>Amount</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Amount\" formControlName=\"amount\">\n                        <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                            Amount is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div><br>\n\n            <mat-form-field color=\"accent\"class=\"full-width\">\n                <mat-label>Suummarise your loan request here</mat-label>\n                <textarea rows=\"8\" matInput placeholder=\"Summary of loan\" formControlName=\"summary\"></textarea>\n                <mat-error *ngIf=\"addressForm.controls['summary'].hasError('invalid')\">\n                    Summary is <strong>required</strong>\n                </mat-error>\n            </mat-form-field>\n\n            <br>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>select Duration of Loan</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"duration\">\n                            <mat-option *ngFor=\"let duration of durations\" [value]=\"duration.name\">\n                                {{ duration.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            Duration<strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>select affordable interest rate</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.name\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            interest rate<strong>required</strong>\n                        </mat-error>\n                        <mat-hint>select affordable interest rate</mat-hint>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n            <mat-card-actions>\n                <button mat-raised-button color=\"accent\" type=\"submit\">Submit Request</button>\n            </mat-card-actions>\n        </mat-card-content>\n      \n    </mat-card>\n</form>\n\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
     /***/
   },
 
@@ -2385,7 +2385,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   {
                     // r = confirm(s['msg'])
                     _this5.hu = s;
-                    _this5.show = true; // this.d.getElementsByClassName('dialog')
+                    _this5.show = true;
+                    _this5.ii = "You are successfully Registered on santsi Kudi \n            Your account number ".concat(_this5.hu['user']['account_no'], " was sent to your email"); // this.d.getElementsByClassName('dialog')
                     // this.d.getElementById('dialog').showModal();
                     // g.
 
@@ -2947,6 +2948,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         });
         this.sho = false;
         this.show = false;
+        this.sjo = false;
         this.types = [{
           name: '25%'
         }, {
@@ -3002,14 +3004,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "vrf",
         value: function vrf() {
-          if (this.addressForm.get('bvn').value == '12345678901') {}
+          var _this8 = this;
 
-          this.show = true;
-          this.ls.vrfBvn(this.addressForm.get('bvn').value, JSON.parse(localStorage.getItem("user"))['account_no']).subscribe(function (e) {
-            // console.info(e)
-            localStorage.setItem('user', JSON.stringify(e));
-            console.log(e['bvn']);
-          }); // setTimeout(() => { this.chkLog() }, 5000)
+          if (this.addressForm.get('bvn').value != '12345678901') {
+            this.sho = true;
+          } else {
+            this.show = true;
+            this.ls.vrfBvn(this.addressForm.get('bvn').value, JSON.parse(localStorage.getItem("user"))['account_no']).subscribe(function (e) {
+              _this8.sjo = true;
+              localStorage.setItem('user', JSON.stringify(e));
+              _this8.bvnn = e['bvn'];
+              console.log(e['bvn']);
+              setTimeout(function () {
+                _this8.chkLog();
+              }, 5000);
+            });
+          }
+        }
+      }, {
+        key: "hg",
+        value: function hg() {
+          this.d.getElementById('lok').style.display = "none";
         }
       }, {
         key: "chkLog",
@@ -3020,6 +3035,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.d.getElementById('loanForm').style.visibility = "hidden";
             this.d.getElementById('bvn').classList.add('show');
           } else if (JSON.parse(localStorage.getItem("user"))['verified'] == true) {
+            this.d.getElementById('lok').style.display = "none";
             this.d.getElementById('loanForm').classList.add('show');
             this.d.getElementById('bvn').classList.remove('show');
           }
@@ -3027,14 +3043,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this8 = this;
+          var _this9 = this;
 
           this.d.getElementById('loader').classList.add('show');
           this.ls.loan(this.addressForm.value).subscribe(function (s) {
             var r = confirm('successfully submitted' + "\n" + "This is your Loan ID" + "\n" + s['loanId']);
-            if (r == true) _this8.r.navigateByUrl('loanstatus');
+            if (r == true) _this9.r.navigateByUrl('loanstatus');
 
-            _this8.r.navigateByUrl('loanstatus');
+            _this9.r.navigateByUrl('loanstatus');
           });
         }
       }]);
@@ -3194,13 +3210,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "login",
         value: function login() {
-          var _this9 = this;
+          var _this10 = this;
 
           this.d.getElementById('loader').classList.add('show');
           this.s.login(this.addressForm.value).subscribe(function (d) {
-            _this9.d.getElementById('koo').classList.add('show');
+            _this10.d.getElementById('koo').classList.add('show');
 
-            _this9.kll(d);
+            _this10.kll(d);
           });
         }
       }, {
@@ -3607,16 +3623,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "chkLog",
         value: function chkLog() {
-          var _this10 = this;
+          var _this11 = this;
 
           this.pS.retrAcctBal(this.s.checkLogUser()).subscribe(function (e) {
-            _this10.a = e;
+            _this11.a = e;
           });
           this.pS.retrCred(this.s.checkLogUser()).subscribe(function (e) {
-            _this10.aa = e;
+            _this11.aa = e;
           });
           this.pS.retrDebit(this.s.checkLogUser()).subscribe(function (e) {
-            _this10.aaa = e;
+            _this11.aaa = e;
           });
         }
       }]);
@@ -3851,7 +3867,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "check",
         value: function check() {
-          var _this11 = this;
+          var _this12 = this;
 
           if (this.nameOfRec || this.accoutNoR == null) {}
 
@@ -3861,8 +3877,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             aor: this.accoutNoR,
             nor: this.nameOfRec
           }, this.bankAcct).subscribe(function (po) {
-            _this11.pol = po;
-            _this11.sho = true;
+            _this12.pol = po;
+            _this12.sho = true;
           });
         }
       }, {
@@ -4058,10 +4074,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this12 = this;
+          var _this13 = this;
 
           this.s.submitOffer(this.addressForm.value).subscribe(function (s) {
-            _this12.e = _this12.s.loans();
+            _this13.e = _this13.s.loans();
             var tr = confirm('your offer was succefully summtted');
             if (tr == true) return;
             return;
@@ -4205,18 +4221,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(WithdrawComponent, [{
         key: "withdraw",
         value: function withdraw() {
-          var _this13 = this;
+          var _this14 = this;
 
           console.log('ljojo');
           this.s.withdraw(this.addressForm.get('amount').value).subscribe(function (e) {
-            _this13.t = e.msg;
-            _this13.show = true;
+            _this14.t = e.msg;
+            _this14.show = true;
           });
         }
       }, {
         key: "genID",
         value: function genID() {
-          var _this14 = this;
+          var _this15 = this;
 
           var d = {
             amt: this.addressForm.get('amount').value,
@@ -4224,8 +4240,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             witName: this.z['fullName']
           };
           this.s.genWitId(d).subscribe(function (e) {
-            _this14.id = e;
-            _this14.sho = true;
+            _this15.id = e;
+            _this15.sho = true;
           });
         }
       }, {
@@ -4246,19 +4262,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "vrf",
         value: function vrf() {
-          var _this15 = this;
+          var _this16 = this;
 
           this.oko = false;
 
           if (this.addressForm.get('acct').valid) {
             this.s.nameEnq(this.addressForm.get('acct').value).subscribe(function (e) {
-              if (_this15.addressForm.get('acct').value != e['data']['AccountNumber']) {
-                _this15.ddee = true;
+              if (_this16.addressForm.get('acct').value != e['data']['AccountNumber']) {
+                _this16.ddee = true;
               } else {
-                _this15.vrfAccount = e['data']['AccountNumber'];
-                _this15.vrfMsg = e['message'];
-                _this15.VrfStatus = e['data']['status'];
-                _this15.oko = true;
+                _this16.vrfAccount = e['data']['AccountNumber'];
+                _this16.vrfMsg = e['message'];
+                _this16.VrfStatus = e['data']['status'];
+                _this16.oko = true;
               }
             });
           }
