@@ -173,7 +173,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Enrol to santsi Kudii</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>User Information</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                    <mat-error *ngIf=\"addressForm.controls['firstName'].hasError('invalid')\">\n                        First name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                    <mat-error *ngIf=\"addressForm.controls['lastName'].hasError('invalid')\">\n                        Last name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <textarea matInput placeholder=\"Address\" formControlName=\"address\"></textarea>\n                        <mat-error *ngIf=\"addressForm.controls['address'].hasError('invalid')\">\n                            Address is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"email\" placeholder=\"email\" formControlName=\"email\">\n                    <mat-error *ngIf=\"addressForm.controls['email'].hasError('invalid')\">\n                        email is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"number\" formControlName=\"contact\">\n                    <mat-error *ngIf=\"addressForm.controls['contact'].hasError('invalid')\">\n                        Phone no. is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row \">\n                <mat-form-field color=\"accent\"class=\"full-width\" appearance=\"fill\">\n                    <mat-label>Summary of Business</mat-label>\n                    <textarea matInput formControlName=\"abtBiz\"></textarea>\n                    <mat-error *ngIf=\"addressForm.controls['abtBiz'].hasError('invalid')\">\n                        About Business is <strong>Required</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"select account type\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.abbreviation\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            account type <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"State\" formControlName=\"state\">\n                            <mat-option *ngFor=\"let state of states\" [value]=\"state.abbreviation\">\n                                {{ state.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['state'].hasError('invalid')\">\n                            State is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n\n            <div>\n                <label>choose a strong password of atleast 6 characters</label>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"password\" formControlName=\"pwd\">\n                    <mat-error *ngIf=\"addressForm.controls['pwd'].hasError('invalid')\">\n                        Password is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-actions>\n            <button mat-raised-button color=\"accent\" type=\"submit\">Submit</button>\n        </mat-card-actions>\n    </mat-card>\n</form>\n<dialog id=\"dialog\" *ngIf=\"show === true\" style=\"position: absolute;top: 0;bottom: 0;\">\n\n    <i><b>Your response</b></i>\n\n    <h1>{{this.hu['msg']}}</h1>\n    <h1>\n        {{this.hu['user']['account_no']}}</h1>\n    <button mat-button-raise>\n        ok\n    </button>\n</dialog>\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>\n<app-button *ngIf=\"this.show === true\" text=\"{{'You are successfully Registered on santsi Kudi \nYour Id was sent to your phone number'}}\"\n (ok)=\"login($event)\" >\n    Ok\n</app-button>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Enrol to santsi Kudii</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>User Information</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"First name\" formControlName=\"firstName\">\n                    <mat-error *ngIf=\"addressForm.controls['firstName'].hasError('invalid')\">\n                        First name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput placeholder=\"Last name\" formControlName=\"lastName\">\n                    <mat-error *ngIf=\"addressForm.controls['lastName'].hasError('invalid')\">\n                        Last name is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <textarea matInput placeholder=\"Address\" formControlName=\"address\"></textarea>\n                        <mat-error *ngIf=\"addressForm.controls['address'].hasError('invalid')\">\n                            Address is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"email\" placeholder=\"email\" formControlName=\"email\">\n                    <mat-error *ngIf=\"addressForm.controls['email'].hasError('invalid')\">\n                        email is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n            <div>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"number\" formControlName=\"contact\">\n                    <mat-error *ngIf=\"addressForm.controls['contact'].hasError('invalid')\">\n                        Phone no. is <strong>Invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row \">\n                <mat-form-field color=\"accent\"class=\"full-width\" appearance=\"fill\">\n                    <mat-label>Summary of Business</mat-label>\n                    <textarea matInput formControlName=\"abtBiz\"></textarea>\n                    <mat-error *ngIf=\"addressForm.controls['abtBiz'].hasError('invalid')\">\n                        About Business is <strong>Required</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"select account type\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.abbreviation\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            account type <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-select placeholder=\"State\" formControlName=\"state\">\n                            <mat-option *ngFor=\"let state of states\" [value]=\"state.abbreviation\">\n                                {{ state.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['state'].hasError('invalid')\">\n                            State is <strong>invalid</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n\n            <div>\n                <label>choose a strong password of atleast 6 characters</label>\n                <mat-form-field color=\"accent\"class=\"full-width\">\n                    <input matInput type=\"password\" formControlName=\"pwd\">\n                    <mat-error *ngIf=\"addressForm.controls['pwd'].hasError('invalid')\">\n                        Password is <strong>invalid</strong>\n                    </mat-error>\n                </mat-form-field>\n            </div>\n        </mat-card-content>\n        <mat-card-actions>\n            <button mat-raised-button color=\"accent\" type=\"submit\">Submit</button>\n        </mat-card-actions>\n    </mat-card>\n</form>\n<dialog id=\"dialog\" *ngIf=\"show === true\" style=\"position: absolute;top: 0;bottom: 0;\">\n\n    <i><b>Your response</b></i>\n\n    <h1>{{this.hu['msg']}}</h1>\n    <h1>\n        {{this.hu['user']['account_no']}}</h1>\n    <button mat-button-raise>\n        ok\n    </button>\n</dialog>\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>\n<app-button *ngIf=\"this.show === true\" text=\"{{`You are successfully Registered on santsi Kudi \nYour account number this.hu['user']['account_no'] was sent to your email`}}\"\n (ok)=\"login($event)\" >\n    Ok\n</app-button>";
     /***/
   },
 
@@ -193,7 +193,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top:0;\">\n    <span><strong>Santsi Kudi</strong></span>\n    <span id=\"spacer\"></span><br>\n\n</mat-toolbar>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === false\">\n    <div style=\"height: inherit;\n background:url('https://thumbs.dreamstime.com/b/close-up-african-woman-selling-food-stuff-local-market-holding-mobile-point-sale-device-collecting-credit-card-166608372.jpg');\n display: flex; \n background-position: center;\n background-size: cover;\n background-repeat: no-repeat;\n align-items: center;\n justify-content: center;\">\n        <div>\n            <button mat-button class=\"tiles\" (click)=\"router('login')\">\n                <span *ngIf=\"this.show === true\">Shiga Ciki</span>\n                <span *ngIf=\"this.show === false\">Login</span>\n            </button>\n            <button mat-button class=\"tiles\" (click)=\"router('enrol')\">\n                <span *ngIf=\"this.show === true\">Rajista</span>\n                <span *ngIf=\"this.show === false\">Register</span>\n            </button>\n        </div>\n    </div>\n</section>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === true\">\n    <mat-carousel class=\"he\" timings=\"250ms ease-in\" [autoplay]=\"false\" interval=\"5000\" color=\"accent\" maxWidth=\"auto\"\n        proportion=\"25\" slides=\"3\" [loop]=\"true\" [hideArrows]=\"false\" [hideIndicators]=\"true\" [useKeyboard]=\"true\"\n        [useMouseWheel]=\"false\" orientation=\"ltr\">\n        <mat-carousel-slide *ngIf=\"this.view === true\" class=\"he\" #matCarouselSlide>\n            <div style=\"height: inherit; display: flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\" (click)=\"router('deposit')\" \n                    style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>credit_card</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">yi biya</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Savings</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('withdraw')\" style=\" animation-delay: .25s;\">\n                        <mat-icon mat-card-image>credit_score</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Janye</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Withdraw</mat-card-content>\n                    </button>\n\n                    <button mat-button class=\"tiles\" (click)=\"router('loan')\"\n                        style=\" animation-delay: .35s;\">\n                        <mat-icon mat-card-image>account_balance_wallet</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Bashi</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan</mat-card-content>\n                    </button>\n\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide *ngIf=\"this.view === false\">\n            <button mat-button class=\"tiles\" (click)=\"router('VC')\" style=\"animation-delay: .6s;\">\n                <mat-icon mat-card-image>receipt_short</mat-icon><br>\n                <mat-card-content *ngIf=\"show === true\">VC & Govt</mat-card-content>\n                <mat-card-content *ngIf=\"show === false\">Lenders & Govt</mat-card-content>\n            </button>\n            \n        </mat-carousel-slide>\n        <mat-carousel-slide *ngIf=\"this.view === true\" #matCarouselSlide>\n            <div style=\"height: inherit; \n              display: flex;justify-content: center;align-items: center;\">\n                <div style=\"padding: 20px;\">\n                    <button mat-button class=\"tiles\" \n                    *ngIf=\"this.view === true\"\n                    (click)=\"router('loanstatus')\" style=\"animation-delay: .45s;\">\n                        <mat-icon mat-card-image>receipt_long</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">\n                            <h6 style=\" line-height: 2;   margin-bottom: 0;\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;transform: translateY(10px);\">Matsayin</h6>\n                            <h6 style=\"  line-height: 2;   margin-bottom: 0;transform: translateY(10px);\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;\">Lamuni</h6>\n                        </mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan Status</mat-card-content>\n                    </button>\n                    <button mat-button \n                    *ngIf=\"this.view === true\"\n                    class=\"tiles\" (click)=\"router('deposit')\">\n                        <mat-icon mat-card-image>login</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Biya</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Payments</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\"\n                    (click)=\"router('account_balance')\" style=\" animation-delay: .2s;\">\n                       <mat-icon mat-card-image>account_balance</mat-icon><br>\n                       <mat-card-content *ngIf=\"show === true\">Asusun Lissafi</mat-card-content>\n                       <mat-card-content *ngIf=\"show === false\">\n                           Account Bal</mat-card-content>\n                   </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide class=\"he\" *ngIf=\"this.view === true\" #matCarouselSlide>\n            <div style=\"height: inherit;display:flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\"\n                    *ngIf=\"this.view === true\"\n                    (click)=\"router('enrol')\" style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>account_circle</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">rajista</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Enrol</mat-card-content>\n                    </button>\n\n                    <button mat-button class=\"tiles\"\n                    (click)=\"router('account_balance')\" style=\" animation-delay: .2s;\">\n                       <mat-icon mat-card-image>account_balance</mat-icon><br>\n                       <mat-card-content *ngIf=\"show === true\">Asusun Lissafi</mat-card-content>\n                       <mat-card-content *ngIf=\"show === false\">\n                        <h6 style=\" line-height: 2;   margin-bottom: 0;\n                        margin-block-start: 0px;\n                        margin-block-end: 0px;\n                        margin-inline-start: 0px;\n                        margin-inline-end: 0px;transform: translateY(10px);\">Statement of</h6>\n                        <h6 style=\"  line-height: 2;   margin-bottom: 0;transform: translateY(10px);\n                        margin-block-start: 0px;\n                        margin-block-end: 0px;\n                        margin-inline-start: 0px;\n                        margin-inline-end: 0px;\">Account</h6>   \n                         </mat-card-content>\n                   </button>\n                    <button mat-button class=\"tiles\"\n                    *ngIf=\"this.view === true\"\n                    style=\"animation-delay: .3s;\">\n                        <mat-icon mat-card-image>caution</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Taimaka</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Help</mat-card-content>\n                    </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n    </mat-carousel>\n\n    <!-- </div> -->\n</section>\n<!-- <section style=\"   padding:5px 35px;\">\n    <div style=\"display: flex; flex-wrap: wrap;\">\n\n\n    </div>\n</section><br> -->\n<app-chooser class=\"loader\" [text]='o' id=\"yy\" (ok)=\"yuuyu($event)\"></app-chooser>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent' style=\"top:0;\">\n    <span><strong>Santsi Kudi</strong></span>\n    <span id=\"spacer\"></span><br>\n\n</mat-toolbar>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === false\">\n    <div style=\"height: inherit;\n background:url('https://thumbs.dreamstime.com/b/close-up-african-woman-selling-food-stuff-local-market-holding-mobile-point-sale-device-collecting-credit-card-166608372.jpg');\n display: flex; \n background-position: center;\n background-size: cover;\n background-repeat: no-repeat;\n align-items: center;\n justify-content: center;\">\n        <div>\n            <button mat-button class=\"tiles\" (click)=\"router('login')\">\n                <span *ngIf=\"this.show === true\">Shiga Ciki</span>\n                <span *ngIf=\"this.show === false\">Login</span>\n            </button>\n            <button mat-button class=\"tiles\" (click)=\"router('enrol')\">\n                <span *ngIf=\"this.show === true\">Rajista</span>\n                <span *ngIf=\"this.show === false\">Register</span>\n            </button>\n        </div>\n    </div>\n</section>\n<section style=\"position: relative;top:0;\" *ngIf=\"this.ol === true\">\n    <mat-carousel class=\"he\" timings=\"250ms ease-in\" [autoplay]=\"false\" interval=\"5000\" color=\"accent\" maxWidth=\"auto\"\n        proportion=\"25\" slides=\"3\" [loop]=\"true\" [hideArrows]=\"false\" [hideIndicators]=\"true\" [useKeyboard]=\"true\"\n        [useMouseWheel]=\"false\" orientation=\"ltr\">\n        <mat-carousel-slide *ngIf=\"this.view === true\" class=\"he\" #matCarouselSlide>\n            <div style=\"height: inherit; display: flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\" (click)=\"router('deposit')\" \n                    style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>credit_card</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">yi biya</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Savings</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\" (click)=\"router('withdraw')\" style=\" animation-delay: .25s;\">\n                        <mat-icon mat-card-image>credit_score</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Janye</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Withdraw</mat-card-content>\n                    </button>\n\n                    <button mat-button class=\"tiles\" (click)=\"router('loan')\"\n                        style=\" animation-delay: .35s;\">\n                        <mat-icon mat-card-image>account_balance_wallet</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Bashi</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan</mat-card-content>\n                    </button>\n\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide *ngIf=\"this.view === false\">\n            <button mat-button class=\"tiles\" (click)=\"router('VC')\" style=\"animation-delay: .6s;\">\n                <mat-icon mat-card-image>receipt_short</mat-icon><br>\n                <mat-card-content *ngIf=\"show === true\">VC & Govt</mat-card-content>\n                <mat-card-content *ngIf=\"show === false\">Lenders & Govt</mat-card-content>\n            </button>\n            \n        </mat-carousel-slide>\n        <mat-carousel-slide *ngIf=\"this.view === true\" #matCarouselSlide>\n            <div style=\"height: inherit; \n              display: flex;justify-content: center;align-items: center;\">\n                <div style=\"padding: 20px;\">\n                    <button mat-button class=\"tiles\" \n                    *ngIf=\"this.view === true\"\n                    (click)=\"router('loanstatus')\" style=\"animation-delay: .45s;\">\n                        <mat-icon mat-card-image>receipt_long</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">\n                            <h6 style=\" line-height: 2;   margin-bottom: 0;\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;transform: translateY(10px);\">Matsayin</h6>\n                            <h6 style=\"  line-height: 2;   margin-bottom: 0;transform: translateY(10px);\n                            margin-block-start: 0px;\n                            margin-block-end: 0px;\n                            margin-inline-start: 0px;\n                            margin-inline-end: 0px;\">Lamuni</h6>\n                        </mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Loan Status</mat-card-content>\n                    </button>\n                    <button mat-button \n                    *ngIf=\"this.view === true\"\n                    class=\"tiles\" (click)=\"router('deposit')\">\n                        <mat-icon mat-card-image>login</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Biya</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Payments</mat-card-content>\n                    </button>\n                    <button mat-button class=\"tiles\"\n                    (click)=\"router('account_balance')\" style=\" animation-delay: .2s;\">\n                       <mat-icon mat-card-image>account_balance</mat-icon><br>\n                       <mat-card-content *ngIf=\"show === true\">Asusun Lissafi</mat-card-content>\n                       <mat-card-content *ngIf=\"show === false\">\n                           Account Bal</mat-card-content>\n                   </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n        <mat-carousel-slide class=\"he\" *ngIf=\"this.view === true\" #matCarouselSlide>\n            <div style=\"height: inherit;display:flex;justify-content: center;align-items: center;\">\n                <div>\n                    <button mat-button class=\"tiles\"\n                    *ngIf=\"this.view === true\"\n                    (click)=\"router('login')\" style=\" animation-delay: .15s;\">\n                        <mat-icon mat-card-image>account_circle</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">rajista</mat-card-content>\n\n                        <mat-card-content *ngIf=\"show === false\">Switch To Lender's Account</mat-card-content>\n                    </button>\n\n                    <button mat-button class=\"tiles\"\n                    (click)=\"router('account_balance')\" style=\" animation-delay: .2s;\">\n                       <mat-icon mat-card-image>account_balance</mat-icon><br>\n                       <mat-card-content *ngIf=\"show === true\">Asusun Lissafi</mat-card-content>\n                       <mat-card-content *ngIf=\"show === false\">\n                        <h6 style=\" line-height: 2;   margin-bottom: 0;\n                        margin-block-start: 0px;\n                        margin-block-end: 0px;\n                        margin-inline-start: 0px;\n                        margin-inline-end: 0px;transform: translateY(10px);\">Statement of</h6>\n                        <h6 style=\"  line-height: 2;   margin-bottom: 0;transform: translateY(10px);\n                        margin-block-start: 0px;\n                        margin-block-end: 0px;\n                        margin-inline-start: 0px;\n                        margin-inline-end: 0px;\">Account</h6>   \n                         </mat-card-content>\n                   </button>\n                    <button mat-button class=\"tiles\"\n                    *ngIf=\"this.view === true\"\n                    style=\"animation-delay: .3s;\">\n                        <mat-icon mat-card-image>caution</mat-icon><br>\n                        <mat-card-content *ngIf=\"show === true\">Taimaka</mat-card-content>\n                        <mat-card-content *ngIf=\"show === false\">Help</mat-card-content>\n                    </button>\n                </div>\n            </div>\n        </mat-carousel-slide>\n    </mat-carousel>\n\n    <!-- </div> -->\n</section>\n<!-- <section style=\"   padding:5px 35px;\">\n    <div style=\"display: flex; flex-wrap: wrap;\">\n\n\n    </div>\n</section><br> -->\n<app-chooser class=\"loader\" [text]='o' id=\"yy\" (ok)=\"yuuyu($event)\"></app-chooser>";
     /***/
   },
 
@@ -233,7 +233,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent'>\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>loan</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Loan</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>Loan Information</mat-card-title>\n        </mat-card-header>\n\n        <mat-card-content id=\"bvn\" style=\"visibility: hidden;\" >\n            <p>\n                <mat-form-field appearance=\"outline\">\n                    <mat-label>Verify your BVN</mat-label>\n                    <input matInput type=\"number\" placeholder=\"BVN\"  (blur)=\"vrf()\"formControlName=\"bvn\">\n                   <mat-hint>note that: only the BVN assigned on the sandbox can be used</mat-hint>\n                </mat-form-field>\n                &nbsp;<mat-hint *ngIf=\"this.show === true\">Verifying . . .</mat-hint>\n                &nbsp;<mat-hint *ngIf = \"this.sho === true\" style=\"color: #69f0ae;\">Verified</mat-hint>\n            </p>\n            \n        </mat-card-content>\n        <mat-card-content id=\"loanForm\"  style=\"visibility: hidden;\">\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field class=\"full-width\">\n                        <mat-label>Reason for Loan</mat-label>\n                        <input matInput placeholder=\"Reason for laon\" formControlName=\"reason\">\n                        <mat-hint>e.g Start Up, Expansion, Staff Remuneration</mat-hint>\n                        <mat-error *ngIf=\"addressForm.controls['reason'].hasError('invalid')\">\n                            Reason is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n            <br>\n            <br>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field class=\"full-width\">\n                        <mat-label>Amount</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Amount\" formControlName=\"amount\">\n                        <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                            Amount is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div><br>\n\n            <mat-form-field class=\"full-width\">\n                <mat-label>Suummarise your loan request here</mat-label>\n                <textarea rows=\"8\" matInput placeholder=\"Summary of loan\" formControlName=\"summary\"></textarea>\n                <mat-error *ngIf=\"addressForm.controls['summary'].hasError('invalid')\">\n                    Summary is <strong>required</strong>\n                </mat-error>\n            </mat-form-field>\n\n            <br>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field class=\"full-width\">\n                        <mat-label>select Duration of Loan</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"duration\">\n                            <mat-option *ngFor=\"let duration of durations\" [value]=\"duration.name\">\n                                {{ duration.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            Duration<strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field class=\"full-width\">\n                        <mat-label>select affordable interest rate</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.name\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            interest rate<strong>required</strong>\n                        </mat-error>\n                        <mat-hint>select affordable interest rate</mat-hint>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n            <mat-card-actions>\n                <button mat-raised-button color=\"accent\" type=\"submit\">Submit Request</button>\n            </mat-card-actions>\n        </mat-card-content>\n      \n    </mat-card>\n</form>\n\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
+    __webpack_exports__["default"] = "<mat-toolbar matRipple color='accent'>\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>loan</strong></span>\n    <span id=\"spacer\"></span>\n</mat-toolbar>\n<mat-toolbar matRipple color='accent' style=\"top: 0;\">\n    <button (click)=\"goback()\" mat-icon-button aria-label=\"Example icon button with a heart icon\">\n        <mat-icon>west</mat-icon>\n    </button>\n    <span><strong>Loan</strong></span>\n    <span id=\"spacer\"></span>\n\n</mat-toolbar>\n<br>\n<br>\n<br>\n<br>\n<form style=\"padding: 1%;\" [formGroup]=\"addressForm\" validate (ngSubmit)=\"onSubmit()\">\n   \n    <mat-card-content id=\"bvn\" style=\"visibility: hidden;\" >\n        <p>\n            <mat-form-field color=\"accent\"appearance=\"outline\">\n                <mat-label>Verify your BVN</mat-label>\n                <input matInput type=\"number\" placeholder=\"BVN\"  (blur)=\"vrf()\"formControlName=\"bvn\">\n               <mat-hint>note that: only the BVN assigned on the sandbox can be used, which is <b>12345678901</b></mat-hint>\n            </mat-form-field>\n            &nbsp;<mat-hint *ngIf=\"this.show === true\">Verifying . . .</mat-hint>\n            &nbsp;<mat-hint *ngIf = \"this.sho === true\" style=\"color: #69f0ae;\">Verified</mat-hint>\n        </p>\n        \n    </mat-card-content>\n    <mat-card class=\"shipping-card\">\n        <mat-card-header>\n            <mat-card-title>Loan Information</mat-card-title>\n        </mat-card-header>\n\n        <i *ngIf=\"this.oko === false\" >Retrieving Bank Account Info . . .</i>\n\n            <mat-list role=\"list\" *ngIf=\"this.oko === true\">\n                <mat-list-item role=\"listitem\">\n                    <h6>Account Number</h6>&nbsp; &nbsp;{{this.vrfAccount}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Message</h6>&nbsp; &nbsp;{{this.vrfMsg}}\n                </mat-list-item>\n                <mat-divider></mat-divider>\n                <mat-list-item role=\"listitem\">\n                    <h6>Account Status</h6>&nbsp; &nbsp;{{this.VrfStatus}}\n                </mat-list-item>\n            </mat-list>\n            \n        <mat-card-content id=\"loanForm\"  style=\"visibility: hidden;\">\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>Reason for Loan</mat-label>\n                        <input matInput placeholder=\"Reason for laon\" formControlName=\"reason\">\n                        <mat-hint>e.g Start Up, Expansion, Staff Remuneration</mat-hint>\n                        <mat-error *ngIf=\"addressForm.controls['reason'].hasError('invalid')\">\n                            Reason is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n            <br>\n            <br>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>Amount</mat-label>\n                        <input matInput type=\"number\" placeholder=\"Amount\" formControlName=\"amount\">\n                        <mat-error *ngIf=\"addressForm.controls['amount'].hasError('invalid')\">\n                            Amount is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div><br>\n\n            <mat-form-field color=\"accent\"class=\"full-width\">\n                <mat-label>Suummarise your loan request here</mat-label>\n                <textarea rows=\"8\" matInput placeholder=\"Summary of loan\" formControlName=\"summary\"></textarea>\n                <mat-error *ngIf=\"addressForm.controls['summary'].hasError('invalid')\">\n                    Summary is <strong>required</strong>\n                </mat-error>\n            </mat-form-field>\n\n            <br>\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>select Duration of Loan</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"duration\">\n                            <mat-option *ngFor=\"let duration of durations\" [value]=\"duration.name\">\n                                {{ duration.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            Duration<strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n\n            <div class=\"row\">\n                <div class=\"col\">\n                    <mat-form-field color=\"accent\"class=\"full-width\">\n                        <mat-label>select affordable interest rate</mat-label>\n                        <mat-select placeholder=\"select affordable interest rate\" formControlName=\"type\">\n                            <mat-option *ngFor=\"let type of types\" [value]=\"type.name\">\n                                {{ type.name }}\n                            </mat-option>\n                        </mat-select>\n                        <mat-error *ngIf=\"addressForm.controls['type'].hasError('invalid')\">\n                            interest rate<strong>required</strong>\n                        </mat-error>\n                        <mat-hint>select affordable interest rate</mat-hint>\n                    </mat-form-field>\n                </div>\n            </div>\n            <br>\n\n            <mat-card-actions>\n                <button mat-raised-button color=\"accent\" type=\"submit\">Submit Request</button>\n            </mat-card-actions>\n        </mat-card-content>\n      \n    </mat-card>\n</form>\n\n<div id=\"loader\">\n    <figure>\n        <mat-spinner color=\"accent\"></mat-spinner>\n    </figure>\n</div>";
     /***/
   },
 
@@ -1202,7 +1202,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "mat-drawer-container{\r\n    height: 100%!important;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxzQkFBc0I7QUFDMUIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1kcmF3ZXItY29udGFpbmVye1xyXG4gICAgaGVpZ2h0OiAxMDAlIWltcG9ydGFudDtcclxufVxyXG4iXX0= */";
+    __webpack_exports__["default"] = "mat-drawer-container{\r\n    height: 100%!important;\r\n}\r\nmat-list-item{\r\n    cursor: pointer;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxzQkFBc0I7QUFDMUI7QUFDQTtJQUNJLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1kcmF3ZXItY29udGFpbmVye1xyXG4gICAgaGVpZ2h0OiAxMDAlIWltcG9ydGFudDtcclxufVxyXG5tYXQtbGlzdC1pdGVte1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59Il19 */";
     /***/
   },
 
@@ -2028,8 +2028,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
           this.pS.chAcct(this.addressForm.get('acctNo').value).subscribe(function (s) {
             if (s['code'] == 0) _this2.show = false;
-            _this2.b = s;
-            _this2.show = true;
+            if (s['code'] == 2) _this2.show = false;else {
+              _this2.b = s;
+              _this2.show = true;
+            }
           });
         }
       }, {
@@ -3000,13 +3002,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "vrf",
         value: function vrf() {
-          var _this8 = this;
+          if (this.addressForm.get('bvn').value == '12345678901') {}
 
           this.show = true;
-          this.ls.vrfBvn(this.addressForm.get('bvn').value, JSON.parse(localStorage.getItem("user"))['account_no']);
-          setTimeout(function () {
-            _this8.chkLog();
-          }, 5000);
+          this.ls.vrfBvn(this.addressForm.get('bvn').value, JSON.parse(localStorage.getItem("user"))['account_no']).subscribe(function (e) {
+            // console.info(e)
+            localStorage.setItem('user', JSON.stringify(e));
+            console.log(e['bvn']);
+          }); // setTimeout(() => { this.chkLog() }, 5000)
         }
       }, {
         key: "chkLog",
@@ -3017,7 +3020,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.d.getElementById('loanForm').style.visibility = "hidden";
             this.d.getElementById('bvn').classList.add('show');
           } else if (JSON.parse(localStorage.getItem("user"))['verified'] == true) {
-            console.info('bvn');
             this.d.getElementById('loanForm').classList.add('show');
             this.d.getElementById('bvn').classList.remove('show');
           }
@@ -3025,14 +3027,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this9 = this;
+          var _this8 = this;
 
           this.d.getElementById('loader').classList.add('show');
           this.ls.loan(this.addressForm.value).subscribe(function (s) {
             var r = confirm('successfully submitted' + "\n" + "This is your Loan ID" + "\n" + s['loanId']);
-            if (r == true) _this9.r.navigateByUrl('loanstatus');
+            if (r == true) _this8.r.navigateByUrl('loanstatus');
 
-            _this9.r.navigateByUrl('loanstatus');
+            _this8.r.navigateByUrl('loanstatus');
           });
         }
       }]);
@@ -3192,13 +3194,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "login",
         value: function login() {
-          var _this10 = this;
+          var _this9 = this;
 
           this.d.getElementById('loader').classList.add('show');
           this.s.login(this.addressForm.value).subscribe(function (d) {
-            _this10.d.getElementById('koo').classList.add('show');
+            _this9.d.getElementById('koo').classList.add('show');
 
-            _this10.kll(d);
+            _this9.kll(d);
           });
         }
       }, {
@@ -3286,13 +3288,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     "./node_modules/@angular/router/fesm2015/router.js");
 
     var PoissonService = /*#__PURE__*/function () {
+      // server = 'https://api-sansti-kudi.herokuapp.com/'
       function PoissonService(Http, r) {
         _classCallCheck(this, PoissonService);
 
         this.Http = Http;
-        this.r = r; // server = 'http://localhost:3000/';
-
-        this.server = 'https://api-sansti-kudi.herokuapp.com/';
+        this.r = r;
+        this.server = 'http://localhost:3000/';
       } // sav(a:string,b:string,user:{}){
       //   var headers = new HttpHeaders();
       //   headers.append('Content-Type', 'applicatiion/json');
@@ -3381,8 +3383,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           headers.append('Content-Type', 'applicatiion/json');
           return this.Http.get(this.server + 'verifyBVN/' + bvn + "/" + id, {
             headers: headers
-          }).subscribe(function (e) {
-            localStorage.setItem('user', JSON.stringify(e));
           });
         }
       }, {
@@ -3607,16 +3607,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "chkLog",
         value: function chkLog() {
-          var _this11 = this;
+          var _this10 = this;
 
           this.pS.retrAcctBal(this.s.checkLogUser()).subscribe(function (e) {
-            _this11.a = e;
+            _this10.a = e;
           });
           this.pS.retrCred(this.s.checkLogUser()).subscribe(function (e) {
-            _this11.aa = e;
+            _this10.aa = e;
           });
           this.pS.retrDebit(this.s.checkLogUser()).subscribe(function (e) {
-            _this11.aaa = e;
+            _this10.aaa = e;
           });
         }
       }]);
@@ -3699,14 +3699,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     "./node_modules/@angular/router/fesm2015/router.js");
 
     var RegLogService = /*#__PURE__*/function () {
+      //  server =      'https://api-sansti-kudi.herokuapp.com/'
       function RegLogService(d, Http, r) {
         _classCallCheck(this, RegLogService);
 
         this.d = d;
         this.Http = Http;
-        this.r = r; // server = 'http://localhost:3000/';
-
-        this.server = 'https://api-sansti-kudi.herokuapp.com/';
+        this.r = r;
+        this.server = 'http://localhost:3000/';
       }
 
       _createClass(RegLogService, [{
@@ -3851,7 +3851,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "check",
         value: function check() {
-          var _this12 = this;
+          var _this11 = this;
 
           if (this.nameOfRec || this.accoutNoR == null) {}
 
@@ -3861,8 +3861,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             aor: this.accoutNoR,
             nor: this.nameOfRec
           }, this.bankAcct).subscribe(function (po) {
-            _this12.pol = po;
-            _this12.sho = true;
+            _this11.pol = po;
+            _this11.sho = true;
           });
         }
       }, {
@@ -4058,10 +4058,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onSubmit",
         value: function onSubmit() {
-          var _this13 = this;
+          var _this12 = this;
 
           this.s.submitOffer(this.addressForm.value).subscribe(function (s) {
-            _this13.e = _this13.s.loans();
+            _this12.e = _this12.s.loans();
             var tr = confirm('your offer was succefully summtted');
             if (tr == true) return;
             return;
@@ -4205,18 +4205,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(WithdrawComponent, [{
         key: "withdraw",
         value: function withdraw() {
-          var _this14 = this;
+          var _this13 = this;
 
           console.log('ljojo');
           this.s.withdraw(this.addressForm.get('amount').value).subscribe(function (e) {
-            _this14.t = e.msg;
-            _this14.show = true;
+            _this13.t = e.msg;
+            _this13.show = true;
           });
         }
       }, {
         key: "genID",
         value: function genID() {
-          var _this15 = this;
+          var _this14 = this;
 
           var d = {
             amt: this.addressForm.get('amount').value,
@@ -4224,8 +4224,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             witName: this.z['fullName']
           };
           this.s.genWitId(d).subscribe(function (e) {
-            _this15.id = e;
-            _this15.sho = true;
+            _this14.id = e;
+            _this14.sho = true;
           });
         }
       }, {
@@ -4246,19 +4246,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "vrf",
         value: function vrf() {
-          var _this16 = this;
+          var _this15 = this;
 
           this.oko = false;
 
           if (this.addressForm.get('acct').valid) {
             this.s.nameEnq(this.addressForm.get('acct').value).subscribe(function (e) {
-              if (_this16.addressForm.get('acct').value != e['data']['AccountNumber']) {
-                _this16.ddee = true;
+              if (_this15.addressForm.get('acct').value != e['data']['AccountNumber']) {
+                _this15.ddee = true;
               } else {
-                _this16.vrfAccount = e['data']['AccountNumber'];
-                _this16.vrfMsg = e['message'];
-                _this16.VrfStatus = e['data']['status'];
-                _this16.oko = true;
+                _this15.vrfAccount = e['data']['AccountNumber'];
+                _this15.vrfMsg = e['message'];
+                _this15.VrfStatus = e['data']['status'];
+                _this15.oko = true;
               }
             });
           }
