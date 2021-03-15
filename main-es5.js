@@ -178,6 +178,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/gen/gen.component.html":
+  /*!******************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/gen/gen.component.html ***!
+    \******************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppGenGenComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<section>\n    <button mat-button class=\"tiles\" (click)=\"router('home')\" >\n        <mat-card-content>Proceed To App</mat-card-content>\n    </button>\n    <a target=\"_blank\" href=\"https://simulator.africastalking.com:1517/simulator/ussd\">\n        <button mat-button class=\"tiles\">\n        <mat-card-content>USSD</mat-card-content>\n    </button>\n</a>\n</section>\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html":
   /*!********************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html ***!
@@ -1075,56 +1095,65 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony import */
 
 
-    var _home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _gen_gen_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./gen/gen.component */
+    "./src/app/gen/gen.component.ts");
+    /* harmony import */
+
+
+    var _home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./home/home.component */
     "./src/app/home/home.component.ts");
     /* harmony import */
 
 
-    var _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./loan-status/loan-status.component */
     "./src/app/loan-status/loan-status.component.ts");
     /* harmony import */
 
 
-    var _loan_loan_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _loan_loan_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./loan/loan.component */
     "./src/app/loan/loan.component.ts");
     /* harmony import */
 
 
-    var _login_login_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _login_login_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./login/login.component */
     "./src/app/login/login.component.ts");
     /* harmony import */
 
 
-    var _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./receipt/receipt.component */
     "./src/app/receipt/receipt.component.ts");
     /* harmony import */
 
 
-    var _vc_vc_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _vc_vc_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./vc/vc.component */
     "./src/app/vc/vc.component.ts");
     /* harmony import */
 
 
-    var _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ./withdraw/withdraw.component */
     "./src/app/withdraw/withdraw.component.ts");
 
     var routes = [{
       path: '',
-      redirectTo: 'home',
+      redirectTo: 'gen',
       pathMatch: 'full'
     }, {
       path: 'home',
-      component: _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
+      component: _home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"],
       data: {
         animation: 'Home'
       }
+    }, {
+      path: 'gen',
+      component: _gen_gen_component__WEBPACK_IMPORTED_MODULE_5__["GenComponent"]
     }, {
       path: 'enrol',
       component: _enrol_enrol_component__WEBPACK_IMPORTED_MODULE_4__["EnrolComponent"],
@@ -1133,19 +1162,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     }, {
       path: 'login',
-      component: _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"],
+      component: _login_login_component__WEBPACK_IMPORTED_MODULE_9__["LoginComponent"],
       data: {
         animation: 'login'
       }
     }, {
       path: 'loan',
-      component: _loan_loan_component__WEBPACK_IMPORTED_MODULE_7__["LoanComponent"],
+      component: _loan_loan_component__WEBPACK_IMPORTED_MODULE_8__["LoanComponent"],
       data: {
         animation: 'loan'
       }
     }, {
       path: 'loanstatus',
-      component: _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_6__["LoanStatusComponent"],
+      component: _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_7__["LoanStatusComponent"],
       data: {
         animation: 'loanstatus'
       }
@@ -1157,19 +1186,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     }, {
       path: 'withdraw',
-      component: _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_11__["WithdrawComponent"],
+      component: _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_12__["WithdrawComponent"],
       data: {
         animation: 'withdraw'
       }
     }, {
       path: 'account_balance',
-      component: _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_9__["ReceiptComponent"],
+      component: _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_10__["ReceiptComponent"],
       data: {
         animation: 'receipt'
       }
     }, {
       path: 'VC',
-      component: _vc_vc_component__WEBPACK_IMPORTED_MODULE_10__["VCComponent"],
+      component: _vc_vc_component__WEBPACK_IMPORTED_MODULE_11__["VCComponent"],
       data: {
         animation: 'VC'
       }
@@ -1544,7 +1573,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     var _sterpay_sterpay_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
     /*! ./sterpay/sterpay.component */
-    "./src/app/sterpay/sterpay.component.ts"); // import { MatToolbarModule } from '@angular/material/toolbar'
+    "./src/app/sterpay/sterpay.component.ts");
+    /* harmony import */
+
+
+    var _gen_gen_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+    /*! ./gen/gen.component */
+    "./src/app/gen/gen.component.ts"); // import { MatToolbarModule } from '@angular/material/toolbar'
     // import { MatSliderModule } from '@angular/material/slider';
     // import { MatButtonModule } from '@angular/material/button';
     // import { MatSidenavModule } from "@angular/material/sidenav";
@@ -1559,7 +1594,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _enrol_enrol_component__WEBPACK_IMPORTED_MODULE_11__["EnrolComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"], _loan_loan_component__WEBPACK_IMPORTED_MODULE_13__["LoanComponent"], _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_14__["LoanStatusComponent"], _deposit_deposit_component__WEBPACK_IMPORTED_MODULE_15__["DepositComponent"], _vc_vc_component__WEBPACK_IMPORTED_MODULE_16__["VCComponent"], _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_17__["ReceiptComponent"], _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_18__["WithdrawComponent"], _chooser_directive__WEBPACK_IMPORTED_MODULE_21__["ChooserDirective"], _display_directive__WEBPACK_IMPORTED_MODULE_22__["DisplayDirective"], _button_button_component__WEBPACK_IMPORTED_MODULE_23__["ButtonComponent"], _chooser_chooser_component__WEBPACK_IMPORTED_MODULE_24__["ChooserComponent"], _sterpay_sterpay_component__WEBPACK_IMPORTED_MODULE_25__["SterpayComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _enrol_enrol_component__WEBPACK_IMPORTED_MODULE_11__["EnrolComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"], _loan_loan_component__WEBPACK_IMPORTED_MODULE_13__["LoanComponent"], _loan_status_loan_status_component__WEBPACK_IMPORTED_MODULE_14__["LoanStatusComponent"], _deposit_deposit_component__WEBPACK_IMPORTED_MODULE_15__["DepositComponent"], _vc_vc_component__WEBPACK_IMPORTED_MODULE_16__["VCComponent"], _receipt_receipt_component__WEBPACK_IMPORTED_MODULE_17__["ReceiptComponent"], _withdraw_withdraw_component__WEBPACK_IMPORTED_MODULE_18__["WithdrawComponent"], _chooser_directive__WEBPACK_IMPORTED_MODULE_21__["ChooserDirective"], _display_directive__WEBPACK_IMPORTED_MODULE_22__["DisplayDirective"], _button_button_component__WEBPACK_IMPORTED_MODULE_23__["ButtonComponent"], _chooser_chooser_component__WEBPACK_IMPORTED_MODULE_24__["ChooserComponent"], _sterpay_sterpay_component__WEBPACK_IMPORTED_MODULE_25__["SterpayComponent"], _gen_gen_component__WEBPACK_IMPORTED_MODULE_26__["GenComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], _angular_common__WEBPACK_IMPORTED_MODULE_20__["CommonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSlideToggleModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatExpansionModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatProgressSpinnerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSliderModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonToggleModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatNativeDateModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatRippleModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatRadioModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableModule"], _ngmodule_material_carousel__WEBPACK_IMPORTED_MODULE_4__["MatCarouselModule"].forRoot(), angular4_paystack__WEBPACK_IMPORTED_MODULE_19__["Angular4PaystackModule"].forRoot('pk_test_c5bc80647b60c1bf05f3f6fdac32a99f82b598ce'), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
       exports: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"]],
       providers: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDatepickerModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"]],
@@ -2440,6 +2475,102 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       /*! ./enrol.component.css */
       "./src/app/enrol/enrol.component.css"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]))], EnrolComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/gen/gen.component.css":
+  /*!***************************************!*\
+    !*** ./src/app/gen/gen.component.css ***!
+    \***************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppGenGenComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".tiles{\r\n    margin:30% 5%;\r\n    height: 120px;\r\n    width: 120px;\r\n    background-color: var(--lemon);\r\n    box-sizing: border-box;\r\n    border-radius: 50%;\r\n    display: block;\r\n    -webkit-animation: rf 3s infinite;\r\n            animation: rf 3s infinite;\r\n    will-change: background-color, color;\r\n    transition:all .5s;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2VuL2dlbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLGFBQWE7SUFDYixZQUFZO0lBQ1osOEJBQThCO0lBQzlCLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGlDQUF5QjtZQUF6Qix5QkFBeUI7SUFDekIsb0NBQW9DO0lBQ3BDLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL2dlbi9nZW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aWxlc3tcclxuICAgIG1hcmdpbjozMCUgNSU7XHJcbiAgICBoZWlnaHQ6IDEyMHB4O1xyXG4gICAgd2lkdGg6IDEyMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGVtb24pO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgYW5pbWF0aW9uOiByZiAzcyBpbmZpbml0ZTtcclxuICAgIHdpbGwtY2hhbmdlOiBiYWNrZ3JvdW5kLWNvbG9yLCBjb2xvcjtcclxuICAgIHRyYW5zaXRpb246YWxsIC41cztcclxufSJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/gen/gen.component.ts":
+  /*!**************************************!*\
+    !*** ./src/app/gen/gen.component.ts ***!
+    \**************************************/
+
+  /*! exports provided: GenComponent */
+
+  /***/
+  function srcAppGenGenComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GenComponent", function () {
+      return GenComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+
+    var GenComponent = /*#__PURE__*/function () {
+      function GenComponent(r) {
+        _classCallCheck(this, GenComponent);
+
+        this.r = r;
+      }
+
+      _createClass(GenComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "router",
+        value: function router(r) {
+          this.r.navigateByUrl(r);
+        }
+      }]);
+
+      return GenComponent;
+    }();
+
+    GenComponent.ctorParameters = function () {
+      return [{
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }];
+    };
+
+    GenComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-gen',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./gen.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/gen/gen.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./gen.component.css */
+      "./src/app/gen/gen.component.css"))["default"]]
+    })], GenComponent);
     /***/
   },
 
