@@ -3345,9 +3345,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
           this.d.getElementById('loader').classList.add('show');
           this.s.login(this.addressForm.value).subscribe(function (d) {
-            _this10.d.getElementById('koo').classList.add('show');
+            if (d['code'] == 0) alert(d['msg']);else {
+              _this10.d.getElementById('koo').classList.add('show');
 
-            _this10.kll(d);
+              _this10.kll(d);
+            }
           });
         }
       }, {

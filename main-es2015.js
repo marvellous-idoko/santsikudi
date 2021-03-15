@@ -1988,8 +1988,12 @@ let LoginComponent = class LoginComponent {
     login() {
         this.d.getElementById('loader').classList.add('show');
         this.s.login(this.addressForm.value).subscribe(d => {
-            this.d.getElementById('koo').classList.add('show');
-            this.kll(d);
+            if (d['code'] == 0)
+                alert(d['msg']);
+            else {
+                this.d.getElementById('koo').classList.add('show');
+                this.kll(d);
+            }
         });
     }
     router(r) {
